@@ -1,0 +1,933 @@
+2022-03-06 09:15:41.064  INFO 20672 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on DESKTOP-SKB4ABI with PID 20672 (started by 黄涛 in C:\Users\黄涛\Desktop\2022黄涛毕业设计\xzs-mysql\source\xzs)
+2022-03-06 09:15:41.067  INFO 20672 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2022-03-06 09:15:41.114  INFO 20672 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-06 09:15:41.115  INFO 20672 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-06 09:15:42.859  WARN 20672 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-03-06 09:15:42.876  INFO 20672 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-03-06 09:15:42.877  INFO 20672 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1762 ms
+2022-03-06 09:15:43.919  INFO 20672 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46c652fb, org.springframework.security.web.context.SecurityContextPersistenceFilter@6359fa07, org.springframework.security.web.header.HeaderWriterFilter@14f0cc04, org.springframework.web.filter.CorsFilter@333fee58, org.springframework.security.web.authentication.logout.LogoutFilter@6507a8c9, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@52a9c860, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3ceab5fa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6164d488, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@539d3fb2, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@a9c0b3d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55e8bb41, org.springframework.security.web.session.SessionManagementFilter@63a51d10, org.springframework.security.web.access.ExceptionTranslationFilter@1d796ab9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@289d708c]
+2022-03-06 09:15:44.306  INFO 20672 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-06 09:15:44.350  INFO 20672 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2022-03-06 09:15:44.359  INFO 20672 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-03-06 09:15:44.428  INFO 20672 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2022-03-06 09:15:44.431  INFO 20672 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 3.926 seconds (JVM running for 4.999)
+2022-03-06 09:15:51.443  INFO 20672 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-06 09:15:51.444  INFO 20672 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-06 09:15:51.453  INFO 20672 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2022-03-06 09:15:51.609  INFO 20672 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-06 09:15:51.782  INFO 20672 --- [XNIO-1 task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-06 09:15:51.789 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2022-03-06 09:15:51.809 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2022-03-06 09:15:51.830 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2022-03-06 09:15:52.498 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2022-03-06 09:15:52.498 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:15:52.500 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:15:52.500 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2022-03-06 09:15:52.501 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2022-03-06 09:15:52.502 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2022-03-06 09:15:52.503 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2022-03-06 09:15:52.504 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:15:52.505 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:15:52.506 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2022-03-06 09:15:52.506 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:15:52.507 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:15:52.511 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2022-03-06 09:15:52.520 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.U.selectCountByDate            : ==> Parameters: 2022-03-01 00:00:00.0(Timestamp), 2022-03-31 23:59:59.0(Timestamp)
+2022-03-06 09:15:52.522 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.U.selectCountByDate            : <==      Total: 1
+2022-03-06 09:15:52.526 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2022-03-06 09:15:52.527 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.E.selectCountByDate            : ==> Parameters: 2022-03-01 00:00:00.0(Timestamp), 2022-03-31 23:59:59.0(Timestamp)
+2022-03-06 09:15:52.528 DEBUG 20672 --- [XNIO-1 task-1] r.c.m.x.r.E.selectCountByDate            : <==      Total: 0
+2022-03-06 09:16:23.699 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2022-03-06 09:16:23.699 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:16:23.700 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:16:23.701 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2022-03-06 09:16:23.701 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2022-03-06 09:16:23.703 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2022-03-06 09:16:23.703 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2022-03-06 09:16:23.704 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:16:23.704 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:16:23.705 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2022-03-06 09:16:23.705 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:16:23.706 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:16:23.707 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2022-03-06 09:16:23.708 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.U.selectCountByDate            : ==> Parameters: 2022-03-01 00:00:00.0(Timestamp), 2022-03-31 23:59:59.0(Timestamp)
+2022-03-06 09:16:23.709 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.U.selectCountByDate            : <==      Total: 1
+2022-03-06 09:16:23.712 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2022-03-06 09:16:23.712 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.E.selectCountByDate            : ==> Parameters: 2022-03-01 00:00:00.0(Timestamp), 2022-03-31 23:59:59.0(Timestamp)
+2022-03-06 09:16:23.713 DEBUG 20672 --- [XNIO-1 task-6] r.c.m.x.r.E.selectCountByDate            : <==      Total: 0
+2022-03-06 09:16:53.662 DEBUG 20672 --- [XNIO-1 task-7] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2022-03-06 09:16:53.662 DEBUG 20672 --- [XNIO-1 task-7] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2022-03-06 09:16:53.664 DEBUG 20672 --- [XNIO-1 task-7] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2022-03-06 09:16:53.689 DEBUG 20672 --- [XNIO-1 task-7] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 09:16:53.689 DEBUG 20672 --- [XNIO-1 task-7] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 登录了学之思开源考试系统(String), 2022-03-06 09:16:53.668(Timestamp)
+2022-03-06 09:16:54.139 DEBUG 20672 --- [XNIO-1 task-7] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 09:16:54.511 DEBUG 20672 --- [XNIO-1 task-8] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 09:16:54.511 DEBUG 20672 --- [XNIO-1 task-11] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:16:54.512 DEBUG 20672 --- [XNIO-1 task-8] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 09:16:54.512 DEBUG 20672 --- [XNIO-1 task-11] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2022-03-06 09:16:54.515 DEBUG 20672 --- [XNIO-1 task-11] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:16:54.515 DEBUG 20672 --- [XNIO-1 task-10] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:16:54.516 DEBUG 20672 --- [XNIO-1 task-10] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:16:54.516 DEBUG 20672 --- [XNIO-1 task-8] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 09:16:54.518 DEBUG 20672 --- [XNIO-1 task-10] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:16:54.519 DEBUG 20672 --- [XNIO-1 task-10] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:16:54.520 DEBUG 20672 --- [XNIO-1 task-10] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2022-03-06 09:16:54.519(Timestamp)
+2022-03-06 09:16:54.521 DEBUG 20672 --- [XNIO-1 task-10] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:17:07.199 DEBUG 20672 --- [XNIO-1 task-12] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:17:07.199 DEBUG 20672 --- [XNIO-1 task-12] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 1(Integer)
+2022-03-06 09:17:07.200 DEBUG 20672 --- [XNIO-1 task-12] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 0
+2022-03-06 09:17:09.328 DEBUG 20672 --- [XNIO-1 task-13] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:17:09.329 DEBUG 20672 --- [XNIO-1 task-13] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:17:09.330 DEBUG 20672 --- [XNIO-1 task-13] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:17:09.331 DEBUG 20672 --- [XNIO-1 task-13] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:17:09.331 DEBUG 20672 --- [XNIO-1 task-13] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2022-03-06 09:17:09.33(Timestamp)
+2022-03-06 09:17:09.332 DEBUG 20672 --- [XNIO-1 task-13] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:17:09.636 DEBUG 20672 --- [XNIO-1 task-14] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:17:09.636 DEBUG 20672 --- [XNIO-1 task-14] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2022-03-06 09:17:09.637 DEBUG 20672 --- [XNIO-1 task-14] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:17:10.050 DEBUG 20672 --- [XNIO-1 task-15] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:17:10.050 DEBUG 20672 --- [XNIO-1 task-15] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 1(Integer)
+2022-03-06 09:17:10.051 DEBUG 20672 --- [XNIO-1 task-15] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 0
+2022-03-06 09:17:10.312 DEBUG 20672 --- [XNIO-1 task-16] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:17:10.313 DEBUG 20672 --- [XNIO-1 task-16] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:17:10.314 DEBUG 20672 --- [XNIO-1 task-16] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:17:10.314 DEBUG 20672 --- [XNIO-1 task-16] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:17:10.315 DEBUG 20672 --- [XNIO-1 task-16] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 1(Integer), 2022-03-06 09:17:10.314(Timestamp)
+2022-03-06 09:17:10.316 DEBUG 20672 --- [XNIO-1 task-16] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:17:10.358 DEBUG 20672 --- [XNIO-1 task-17] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:17:10.359 DEBUG 20672 --- [XNIO-1 task-17] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
+2022-03-06 09:17:10.359 DEBUG 20672 --- [XNIO-1 task-17] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:17:15.567 DEBUG 20672 --- [XNIO-1 task-19] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 09:17:15.567 DEBUG 20672 --- [XNIO-1 task-19] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2022-03-06 09:17:15.566(Timestamp)
+2022-03-06 09:17:15.695 DEBUG 20672 --- [XNIO-1 task-19] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 09:17:15.793 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2022-03-06 09:17:15.794 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:17:15.795 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:17:15.796 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2022-03-06 09:17:15.796 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2022-03-06 09:17:15.797 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2022-03-06 09:17:15.799 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2022-03-06 09:17:15.800 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:17:15.801 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:17:15.802 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2022-03-06 09:17:15.802 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:17:15.803 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:17:15.804 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2022-03-06 09:17:15.805 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.U.selectCountByDate            : ==> Parameters: 2022-03-01 00:00:00.0(Timestamp), 2022-03-31 23:59:59.0(Timestamp)
+2022-03-06 09:17:15.807 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.U.selectCountByDate            : <==      Total: 2
+2022-03-06 09:17:15.809 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2022-03-06 09:17:15.810 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.E.selectCountByDate            : ==> Parameters: 2022-03-01 00:00:00.0(Timestamp), 2022-03-31 23:59:59.0(Timestamp)
+2022-03-06 09:17:15.811 DEBUG 20672 --- [XNIO-1 task-20] r.c.m.x.r.E.selectCountByDate            : <==      Total: 0
+2022-03-06 09:17:19.687 DEBUG 20672 --- [XNIO-1 task-21] r.c.m.x.r.UserMapper.userPage_COUNT      : ==>  Preparing: SELECT count(0) FROM t_user WHERE deleted = 0 AND role = ? 
+2022-03-06 09:17:19.687 DEBUG 20672 --- [XNIO-1 task-21] r.c.m.x.r.UserMapper.userPage_COUNT      : ==> Parameters: 1(Integer)
+2022-03-06 09:17:19.688 DEBUG 20672 --- [XNIO-1 task-21] r.c.m.x.r.UserMapper.userPage_COUNT      : <==      Total: 1
+2022-03-06 09:17:19.691 DEBUG 20672 --- [XNIO-1 task-21] r.c.m.x.repository.UserMapper.userPage   : ==>  Preparing: SELECT id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id FROM t_user WHERE deleted = 0 AND role = ? order by id desc LIMIT ? 
+2022-03-06 09:17:19.692 DEBUG 20672 --- [XNIO-1 task-21] r.c.m.x.repository.UserMapper.userPage   : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:17:19.693 DEBUG 20672 --- [XNIO-1 task-21] r.c.m.x.repository.UserMapper.userPage   : <==      Total: 1
+2022-03-06 09:17:23.126 DEBUG 20672 --- [XNIO-1 task-22] r.c.m.x.r.UserMapper.getUserById         : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where id=? 
+2022-03-06 09:17:23.127 DEBUG 20672 --- [XNIO-1 task-22] r.c.m.x.r.UserMapper.getUserById         : ==> Parameters: 1(Integer)
+2022-03-06 09:17:23.128 DEBUG 20672 --- [XNIO-1 task-22] r.c.m.x.r.UserMapper.getUserById         : <==      Total: 1
+2022-03-06 09:17:31.283 DEBUG 20672 --- [XNIO-1 task-23] r.c.m.x.r.UserMapper.userPage_COUNT      : ==>  Preparing: SELECT count(0) FROM t_user WHERE deleted = 0 AND role = ? 
+2022-03-06 09:17:31.284 DEBUG 20672 --- [XNIO-1 task-23] r.c.m.x.r.UserMapper.userPage_COUNT      : ==> Parameters: 1(Integer)
+2022-03-06 09:17:31.284 DEBUG 20672 --- [XNIO-1 task-23] r.c.m.x.r.UserMapper.userPage_COUNT      : <==      Total: 1
+2022-03-06 09:17:31.285 DEBUG 20672 --- [XNIO-1 task-23] r.c.m.x.repository.UserMapper.userPage   : ==>  Preparing: SELECT id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id FROM t_user WHERE deleted = 0 AND role = ? order by id desc LIMIT ? 
+2022-03-06 09:17:31.286 DEBUG 20672 --- [XNIO-1 task-23] r.c.m.x.repository.UserMapper.userPage   : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:17:31.286 DEBUG 20672 --- [XNIO-1 task-23] r.c.m.x.repository.UserMapper.userPage   : <==      Total: 1
+2022-03-06 09:17:31.910 DEBUG 20672 --- [XNIO-1 task-24] r.c.m.x.r.UserMapper.getUserById         : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where id=? 
+2022-03-06 09:17:31.910 DEBUG 20672 --- [XNIO-1 task-24] r.c.m.x.r.UserMapper.getUserById         : ==> Parameters: 1(Integer)
+2022-03-06 09:17:31.911 DEBUG 20672 --- [XNIO-1 task-24] r.c.m.x.r.UserMapper.getUserById         : <==      Total: 1
+2022-03-06 09:17:33.034 DEBUG 20672 --- [XNIO-1 task-25] r.c.m.x.r.UserMapper.userPage_COUNT      : ==>  Preparing: SELECT count(0) FROM t_user WHERE deleted = 0 AND role = ? 
+2022-03-06 09:17:33.034 DEBUG 20672 --- [XNIO-1 task-25] r.c.m.x.r.UserMapper.userPage_COUNT      : ==> Parameters: 1(Integer)
+2022-03-06 09:17:33.035 DEBUG 20672 --- [XNIO-1 task-25] r.c.m.x.r.UserMapper.userPage_COUNT      : <==      Total: 1
+2022-03-06 09:17:33.039 DEBUG 20672 --- [XNIO-1 task-25] r.c.m.x.repository.UserMapper.userPage   : ==>  Preparing: SELECT id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id FROM t_user WHERE deleted = 0 AND role = ? order by id desc LIMIT ? 
+2022-03-06 09:17:33.039 DEBUG 20672 --- [XNIO-1 task-25] r.c.m.x.repository.UserMapper.userPage   : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:17:33.040 DEBUG 20672 --- [XNIO-1 task-25] r.c.m.x.repository.UserMapper.userPage   : <==      Total: 1
+2022-03-06 09:17:34.087 DEBUG 20672 --- [XNIO-1 task-26] r.c.m.x.r.UserMapper.userPage_COUNT      : ==>  Preparing: SELECT count(0) FROM t_user WHERE deleted = 0 AND role = ? 
+2022-03-06 09:17:34.087 DEBUG 20672 --- [XNIO-1 task-26] r.c.m.x.r.UserMapper.userPage_COUNT      : ==> Parameters: 3(Integer)
+2022-03-06 09:17:34.088 DEBUG 20672 --- [XNIO-1 task-26] r.c.m.x.r.UserMapper.userPage_COUNT      : <==      Total: 1
+2022-03-06 09:17:34.089 DEBUG 20672 --- [XNIO-1 task-26] r.c.m.x.repository.UserMapper.userPage   : ==>  Preparing: SELECT id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id FROM t_user WHERE deleted = 0 AND role = ? order by id desc LIMIT ? 
+2022-03-06 09:17:34.089 DEBUG 20672 --- [XNIO-1 task-26] r.c.m.x.repository.UserMapper.userPage   : ==> Parameters: 3(Integer), 10(Integer)
+2022-03-06 09:17:34.090 DEBUG 20672 --- [XNIO-1 task-26] r.c.m.x.repository.UserMapper.userPage   : <==      Total: 1
+2022-03-06 09:17:39.912 DEBUG 20672 --- [XNIO-1 task-27] r.c.m.x.r.SubjectMapper.allSubject       : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject 
+2022-03-06 09:17:39.912 DEBUG 20672 --- [XNIO-1 task-27] r.c.m.x.r.SubjectMapper.allSubject       : ==> Parameters: 
+2022-03-06 09:17:39.913 DEBUG 20672 --- [XNIO-1 task-27] r.c.m.x.r.SubjectMapper.allSubject       : <==      Total: 0
+2022-03-06 09:17:40.216 DEBUG 20672 --- [XNIO-1 task-28] r.c.m.x.r.ExamPaperMapper.page_COUNT     : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 
+2022-03-06 09:17:40.216 DEBUG 20672 --- [XNIO-1 task-28] r.c.m.x.r.ExamPaperMapper.page_COUNT     : ==> Parameters: 
+2022-03-06 09:17:40.222 DEBUG 20672 --- [XNIO-1 task-28] r.c.m.x.r.ExamPaperMapper.page_COUNT     : <==      Total: 1
+2022-03-06 09:17:42.699 DEBUG 20672 --- [XNIO-1 task-29] r.c.m.x.r.SubjectMapper.allSubject       : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject 
+2022-03-06 09:17:42.699 DEBUG 20672 --- [XNIO-1 task-29] r.c.m.x.r.SubjectMapper.allSubject       : ==> Parameters: 
+2022-03-06 09:17:42.700 DEBUG 20672 --- [XNIO-1 task-29] r.c.m.x.r.SubjectMapper.allSubject       : <==      Total: 0
+2022-03-06 09:18:02.104 DEBUG 20672 --- [XNIO-1 task-30] r.c.m.x.r.SubjectMapper.allSubject       : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject 
+2022-03-06 09:18:02.104 DEBUG 20672 --- [XNIO-1 task-30] r.c.m.x.r.SubjectMapper.allSubject       : ==> Parameters: 
+2022-03-06 09:18:02.105 DEBUG 20672 --- [XNIO-1 task-30] r.c.m.x.r.SubjectMapper.allSubject       : <==      Total: 0
+2022-03-06 09:18:02.415 DEBUG 20672 --- [XNIO-1 task-31] r.c.m.x.r.QuestionMapper.page_COUNT      : ==>  Preparing: SELECT count(0) FROM t_question WHERE deleted = 0 
+2022-03-06 09:18:02.416 DEBUG 20672 --- [XNIO-1 task-31] r.c.m.x.r.QuestionMapper.page_COUNT      : ==> Parameters: 
+2022-03-06 09:18:02.417 DEBUG 20672 --- [XNIO-1 task-31] r.c.m.x.r.QuestionMapper.page_COUNT      : <==      Total: 1
+2022-03-06 09:18:15.194 DEBUG 20672 --- [XNIO-1 task-32] r.c.m.x.r.TaskExamMapper.page_COUNT      : ==>  Preparing: SELECT count(0) FROM t_task_exam WHERE deleted = 0 
+2022-03-06 09:18:15.194 DEBUG 20672 --- [XNIO-1 task-32] r.c.m.x.r.TaskExamMapper.page_COUNT      : ==> Parameters: 
+2022-03-06 09:18:15.195 DEBUG 20672 --- [XNIO-1 task-32] r.c.m.x.r.TaskExamMapper.page_COUNT      : <==      Total: 1
+2022-03-06 09:18:17.866 DEBUG 20672 --- [XNIO-1 task-33] r.c.m.x.r.SubjectMapper.allSubject       : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject 
+2022-03-06 09:18:17.866 DEBUG 20672 --- [XNIO-1 task-33] r.c.m.x.r.SubjectMapper.allSubject       : ==> Parameters: 
+2022-03-06 09:18:17.867 DEBUG 20672 --- [XNIO-1 task-33] r.c.m.x.r.SubjectMapper.allSubject       : <==      Total: 0
+2022-03-06 09:18:27.746 DEBUG 20672 --- [XNIO-1 task-34] r.c.m.x.r.SubjectMapper.page_COUNT       : ==>  Preparing: SELECT count(0) FROM t_subject WHERE deleted = 0 
+2022-03-06 09:18:27.746 DEBUG 20672 --- [XNIO-1 task-34] r.c.m.x.r.SubjectMapper.page_COUNT       : ==> Parameters: 
+2022-03-06 09:18:27.747 DEBUG 20672 --- [XNIO-1 task-34] r.c.m.x.r.SubjectMapper.page_COUNT       : <==      Total: 1
+2022-03-06 09:18:53.226 DEBUG 20672 --- [XNIO-1 task-35] r.c.m.x.r.SubjectMapper.insertSelective  : ==>  Preparing: insert into t_subject ( name, level, level_name, deleted ) values ( ?, ?, ?, ? ) 
+2022-03-06 09:18:53.227 DEBUG 20672 --- [XNIO-1 task-35] r.c.m.x.r.SubjectMapper.insertSelective  : ==> Parameters: 语文(String), 10(Integer), 高一(String), false(Boolean)
+2022-03-06 09:18:53.612 DEBUG 20672 --- [XNIO-1 task-35] r.c.m.x.r.SubjectMapper.insertSelective  : <==    Updates: 1
+2022-03-06 09:18:54.473 DEBUG 20672 --- [XNIO-1 task-36] r.c.m.x.r.SubjectMapper.page_COUNT       : ==>  Preparing: SELECT count(0) FROM t_subject WHERE deleted = 0 
+2022-03-06 09:18:54.473 DEBUG 20672 --- [XNIO-1 task-36] r.c.m.x.r.SubjectMapper.page_COUNT       : ==> Parameters: 
+2022-03-06 09:18:54.474 DEBUG 20672 --- [XNIO-1 task-36] r.c.m.x.r.SubjectMapper.page_COUNT       : <==      Total: 1
+2022-03-06 09:18:54.475 DEBUG 20672 --- [XNIO-1 task-36] r.c.m.xzs.repository.SubjectMapper.page  : ==>  Preparing: SELECT id, name, level, level_name, item_order, deleted FROM t_subject WHERE deleted = 0 order by id desc LIMIT ? 
+2022-03-06 09:18:54.475 DEBUG 20672 --- [XNIO-1 task-36] r.c.m.xzs.repository.SubjectMapper.page  : ==> Parameters: 10(Integer)
+2022-03-06 09:18:54.476 DEBUG 20672 --- [XNIO-1 task-36] r.c.m.xzs.repository.SubjectMapper.page  : <==      Total: 1
+2022-03-06 09:19:03.739 DEBUG 20672 --- [XNIO-1 task-37] r.c.m.x.r.SubjectMapper.insertSelective  : ==>  Preparing: insert into t_subject ( name, level, level_name, deleted ) values ( ?, ?, ?, ? ) 
+2022-03-06 09:19:03.739 DEBUG 20672 --- [XNIO-1 task-37] r.c.m.x.r.SubjectMapper.insertSelective  : ==> Parameters: 数学(String), 10(Integer), 高一(String), false(Boolean)
+2022-03-06 09:19:03.876 DEBUG 20672 --- [XNIO-1 task-37] r.c.m.x.r.SubjectMapper.insertSelective  : <==    Updates: 1
+2022-03-06 09:19:04.736 DEBUG 20672 --- [XNIO-1 task-38] r.c.m.x.r.SubjectMapper.page_COUNT       : ==>  Preparing: SELECT count(0) FROM t_subject WHERE deleted = 0 
+2022-03-06 09:19:04.736 DEBUG 20672 --- [XNIO-1 task-38] r.c.m.x.r.SubjectMapper.page_COUNT       : ==> Parameters: 
+2022-03-06 09:19:04.737 DEBUG 20672 --- [XNIO-1 task-38] r.c.m.x.r.SubjectMapper.page_COUNT       : <==      Total: 1
+2022-03-06 09:19:04.737 DEBUG 20672 --- [XNIO-1 task-38] r.c.m.xzs.repository.SubjectMapper.page  : ==>  Preparing: SELECT id, name, level, level_name, item_order, deleted FROM t_subject WHERE deleted = 0 order by id desc LIMIT ? 
+2022-03-06 09:19:04.737 DEBUG 20672 --- [XNIO-1 task-38] r.c.m.xzs.repository.SubjectMapper.page  : ==> Parameters: 10(Integer)
+2022-03-06 09:19:04.738 DEBUG 20672 --- [XNIO-1 task-38] r.c.m.xzs.repository.SubjectMapper.page  : <==      Total: 2
+2022-03-06 09:19:16.391 DEBUG 20672 --- [XNIO-1 task-39] r.c.m.x.r.SubjectMapper.insertSelective  : ==>  Preparing: insert into t_subject ( name, level, level_name, deleted ) values ( ?, ?, ?, ? ) 
+2022-03-06 09:19:16.392 DEBUG 20672 --- [XNIO-1 task-39] r.c.m.x.r.SubjectMapper.insertSelective  : ==> Parameters: 英语(String), 10(Integer), 高一(String), false(Boolean)
+2022-03-06 09:19:16.563 DEBUG 20672 --- [XNIO-1 task-39] r.c.m.x.r.SubjectMapper.insertSelective  : <==    Updates: 1
+2022-03-06 09:19:17.427 DEBUG 20672 --- [XNIO-1 task-40] r.c.m.x.r.SubjectMapper.page_COUNT       : ==>  Preparing: SELECT count(0) FROM t_subject WHERE deleted = 0 
+2022-03-06 09:19:17.427 DEBUG 20672 --- [XNIO-1 task-40] r.c.m.x.r.SubjectMapper.page_COUNT       : ==> Parameters: 
+2022-03-06 09:19:17.428 DEBUG 20672 --- [XNIO-1 task-40] r.c.m.x.r.SubjectMapper.page_COUNT       : <==      Total: 1
+2022-03-06 09:19:17.429 DEBUG 20672 --- [XNIO-1 task-40] r.c.m.xzs.repository.SubjectMapper.page  : ==>  Preparing: SELECT id, name, level, level_name, item_order, deleted FROM t_subject WHERE deleted = 0 order by id desc LIMIT ? 
+2022-03-06 09:19:17.429 DEBUG 20672 --- [XNIO-1 task-40] r.c.m.xzs.repository.SubjectMapper.page  : ==> Parameters: 10(Integer)
+2022-03-06 09:19:17.430 DEBUG 20672 --- [XNIO-1 task-40] r.c.m.xzs.repository.SubjectMapper.page  : <==      Total: 3
+2022-03-06 09:19:23.877 DEBUG 20672 --- [XNIO-1 task-41] r.c.m.x.r.SubjectMapper.insertSelective  : ==>  Preparing: insert into t_subject ( name, level, level_name, deleted ) values ( ?, ?, ?, ? ) 
+2022-03-06 09:19:23.877 DEBUG 20672 --- [XNIO-1 task-41] r.c.m.x.r.SubjectMapper.insertSelective  : ==> Parameters: 物理(String), 10(Integer), 高一(String), false(Boolean)
+2022-03-06 09:19:24.657 DEBUG 20672 --- [XNIO-1 task-41] r.c.m.x.r.SubjectMapper.insertSelective  : <==    Updates: 1
+2022-03-06 09:19:25.512 DEBUG 20672 --- [XNIO-1 task-42] r.c.m.x.r.SubjectMapper.page_COUNT       : ==>  Preparing: SELECT count(0) FROM t_subject WHERE deleted = 0 
+2022-03-06 09:19:25.512 DEBUG 20672 --- [XNIO-1 task-42] r.c.m.x.r.SubjectMapper.page_COUNT       : ==> Parameters: 
+2022-03-06 09:19:25.513 DEBUG 20672 --- [XNIO-1 task-42] r.c.m.x.r.SubjectMapper.page_COUNT       : <==      Total: 1
+2022-03-06 09:19:25.514 DEBUG 20672 --- [XNIO-1 task-42] r.c.m.xzs.repository.SubjectMapper.page  : ==>  Preparing: SELECT id, name, level, level_name, item_order, deleted FROM t_subject WHERE deleted = 0 order by id desc LIMIT ? 
+2022-03-06 09:19:25.514 DEBUG 20672 --- [XNIO-1 task-42] r.c.m.xzs.repository.SubjectMapper.page  : ==> Parameters: 10(Integer)
+2022-03-06 09:19:25.515 DEBUG 20672 --- [XNIO-1 task-42] r.c.m.xzs.repository.SubjectMapper.page  : <==      Total: 4
+2022-03-06 09:19:34.396 DEBUG 20672 --- [XNIO-1 task-43] r.c.m.x.r.SubjectMapper.insertSelective  : ==>  Preparing: insert into t_subject ( name, level, level_name, deleted ) values ( ?, ?, ?, ? ) 
+2022-03-06 09:19:34.397 DEBUG 20672 --- [XNIO-1 task-43] r.c.m.x.r.SubjectMapper.insertSelective  : ==> Parameters: 化学(String), 10(Integer), 高一(String), false(Boolean)
+2022-03-06 09:19:34.529 DEBUG 20672 --- [XNIO-1 task-43] r.c.m.x.r.SubjectMapper.insertSelective  : <==    Updates: 1
+2022-03-06 09:19:35.394 DEBUG 20672 --- [XNIO-1 task-44] r.c.m.x.r.SubjectMapper.page_COUNT       : ==>  Preparing: SELECT count(0) FROM t_subject WHERE deleted = 0 
+2022-03-06 09:19:35.395 DEBUG 20672 --- [XNIO-1 task-44] r.c.m.x.r.SubjectMapper.page_COUNT       : ==> Parameters: 
+2022-03-06 09:19:35.395 DEBUG 20672 --- [XNIO-1 task-44] r.c.m.x.r.SubjectMapper.page_COUNT       : <==      Total: 1
+2022-03-06 09:19:35.396 DEBUG 20672 --- [XNIO-1 task-44] r.c.m.xzs.repository.SubjectMapper.page  : ==>  Preparing: SELECT id, name, level, level_name, item_order, deleted FROM t_subject WHERE deleted = 0 order by id desc LIMIT ? 
+2022-03-06 09:19:35.396 DEBUG 20672 --- [XNIO-1 task-44] r.c.m.xzs.repository.SubjectMapper.page  : ==> Parameters: 10(Integer)
+2022-03-06 09:19:35.398 DEBUG 20672 --- [XNIO-1 task-44] r.c.m.xzs.repository.SubjectMapper.page  : <==      Total: 5
+2022-03-06 09:19:38.557 DEBUG 20672 --- [XNIO-1 task-45] r.c.m.x.r.SubjectMapper.allSubject       : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject 
+2022-03-06 09:19:38.557 DEBUG 20672 --- [XNIO-1 task-45] r.c.m.x.r.SubjectMapper.allSubject       : ==> Parameters: 
+2022-03-06 09:19:38.558 DEBUG 20672 --- [XNIO-1 task-45] r.c.m.x.r.SubjectMapper.allSubject       : <==      Total: 5
+2022-03-06 09:19:38.870 DEBUG 20672 --- [XNIO-1 task-46] r.c.m.x.r.ExamPaperMapper.page_COUNT     : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 
+2022-03-06 09:19:38.870 DEBUG 20672 --- [XNIO-1 task-46] r.c.m.x.r.ExamPaperMapper.page_COUNT     : ==> Parameters: 
+2022-03-06 09:19:38.871 DEBUG 20672 --- [XNIO-1 task-46] r.c.m.x.r.ExamPaperMapper.page_COUNT     : <==      Total: 1
+2022-03-06 09:19:42.121 DEBUG 20672 --- [XNIO-1 task-47] r.c.m.x.r.SubjectMapper.allSubject       : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject 
+2022-03-06 09:19:42.121 DEBUG 20672 --- [XNIO-1 task-47] r.c.m.x.r.SubjectMapper.allSubject       : ==> Parameters: 
+2022-03-06 09:19:42.122 DEBUG 20672 --- [XNIO-1 task-47] r.c.m.x.r.SubjectMapper.allSubject       : <==      Total: 5
+2022-03-06 09:19:42.122 DEBUG 20672 --- [XNIO-1 task-48] r.c.m.x.r.QuestionMapper.page_COUNT      : ==>  Preparing: SELECT count(0) FROM t_question WHERE deleted = 0 
+2022-03-06 09:19:42.122 DEBUG 20672 --- [XNIO-1 task-48] r.c.m.x.r.QuestionMapper.page_COUNT      : ==> Parameters: 
+2022-03-06 09:19:42.123 DEBUG 20672 --- [XNIO-1 task-48] r.c.m.x.r.QuestionMapper.page_COUNT      : <==      Total: 1
+2022-03-06 09:19:46.850 DEBUG 20672 --- [XNIO-1 task-49] r.c.m.x.r.SubjectMapper.allSubject       : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject 
+2022-03-06 09:19:46.850 DEBUG 20672 --- [XNIO-1 task-49] r.c.m.x.r.SubjectMapper.allSubject       : ==> Parameters: 
+2022-03-06 09:19:46.852 DEBUG 20672 --- [XNIO-1 task-49] r.c.m.x.r.SubjectMapper.allSubject       : <==      Total: 5
+2022-03-06 09:20:52.068 DEBUG 20672 --- [XNIO-1 task-51] r.c.m.x.r.S.selectByPrimaryKey           : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where id = ? 
+2022-03-06 09:20:52.068 DEBUG 20672 --- [XNIO-1 task-51] r.c.m.x.r.S.selectByPrimaryKey           : ==> Parameters: 2(Integer)
+2022-03-06 09:20:52.069 DEBUG 20672 --- [XNIO-1 task-51] r.c.m.x.r.S.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:20:52.072 DEBUG 20672 --- [XNIO-1 task-51] r.c.m.x.r.T.insertSelective              : ==>  Preparing: insert into t_text_content ( content, create_time ) values ( ?, ? ) 
+2022-03-06 09:20:52.072 DEBUG 20672 --- [XNIO-1 task-51] r.c.m.x.r.T.insertSelective              : ==> Parameters: {"titleContent":"1+1 =&nbsp;","analyze":"1+1=2","questionItemObjects":[{"prefix":"A","content":"<p class=\"ueditor-p\">1</p>","score":null,"itemUuid":null},{"prefix":"B","content":"2","score":null,"itemUuid":null},{"prefix":"C","content":"3","score":null,"itemUuid":null},{"prefix":"D","content":"4","score":null,"itemUuid":null}],"correct":"B"}(String), 2022-03-06 09:20:52.066(Timestamp)
+2022-03-06 09:20:52.079 DEBUG 20672 --- [XNIO-1 task-51] r.c.m.x.r.T.insertSelective              : <==    Updates: 1
+2022-03-06 09:20:52.081 DEBUG 20672 --- [XNIO-1 task-51] r.c.m.x.r.Q.insertSelective              : ==>  Preparing: insert into t_question ( question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2022-03-06 09:20:52.082 DEBUG 20672 --- [XNIO-1 task-51] r.c.m.x.r.Q.insertSelective              : ==> Parameters: 1(Integer), 2(Integer), 1000(Integer), 10(Integer), 1(Integer), B(String), 1(Integer), 2(Integer), 1(Integer), 2022-03-06 09:20:52.066(Timestamp), false(Boolean)
+2022-03-06 09:20:52.451 DEBUG 20672 --- [XNIO-1 task-51] r.c.m.x.r.Q.insertSelective              : <==    Updates: 1
+2022-03-06 09:20:53.151 DEBUG 20672 --- [XNIO-1 task-52] r.c.m.x.r.SubjectMapper.allSubject       : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject 
+2022-03-06 09:20:53.151 DEBUG 20672 --- [XNIO-1 task-52] r.c.m.x.r.SubjectMapper.allSubject       : ==> Parameters: 
+2022-03-06 09:20:53.152 DEBUG 20672 --- [XNIO-1 task-52] r.c.m.x.r.SubjectMapper.allSubject       : <==      Total: 5
+2022-03-06 09:20:53.461 DEBUG 20672 --- [XNIO-1 task-53] r.c.m.x.r.QuestionMapper.page_COUNT      : ==>  Preparing: SELECT count(0) FROM t_question WHERE deleted = 0 
+2022-03-06 09:20:53.462 DEBUG 20672 --- [XNIO-1 task-53] r.c.m.x.r.QuestionMapper.page_COUNT      : ==> Parameters: 
+2022-03-06 09:20:54.310 DEBUG 20672 --- [XNIO-1 task-53] r.c.m.x.r.QuestionMapper.page_COUNT      : <==      Total: 1
+2022-03-06 09:20:54.311 DEBUG 20672 --- [XNIO-1 task-53] r.c.m.x.repository.QuestionMapper.page   : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question WHERE deleted = 0 order by id desc LIMIT ? 
+2022-03-06 09:20:54.311 DEBUG 20672 --- [XNIO-1 task-53] r.c.m.x.repository.QuestionMapper.page   : ==> Parameters: 10(Integer)
+2022-03-06 09:20:54.314 DEBUG 20672 --- [XNIO-1 task-53] r.c.m.x.repository.QuestionMapper.page   : <==      Total: 1
+2022-03-06 09:20:54.315 DEBUG 20672 --- [XNIO-1 task-53] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2022-03-06 09:20:54.316 DEBUG 20672 --- [XNIO-1 task-53] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:20:54.316 DEBUG 20672 --- [XNIO-1 task-53] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:21:01.917 DEBUG 20672 --- [XNIO-1 task-54] r.c.m.x.r.SubjectMapper.allSubject       : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject 
+2022-03-06 09:21:01.917 DEBUG 20672 --- [XNIO-1 task-54] r.c.m.x.r.SubjectMapper.allSubject       : ==> Parameters: 
+2022-03-06 09:21:01.918 DEBUG 20672 --- [XNIO-1 task-54] r.c.m.x.r.SubjectMapper.allSubject       : <==      Total: 5
+2022-03-06 09:21:01.918 DEBUG 20672 --- [XNIO-1 task-55] r.c.m.x.r.ExamPaperMapper.page_COUNT     : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 
+2022-03-06 09:21:01.918 DEBUG 20672 --- [XNIO-1 task-55] r.c.m.x.r.ExamPaperMapper.page_COUNT     : ==> Parameters: 
+2022-03-06 09:21:01.919 DEBUG 20672 --- [XNIO-1 task-55] r.c.m.x.r.ExamPaperMapper.page_COUNT     : <==      Total: 1
+2022-03-06 09:21:04.191 DEBUG 20672 --- [XNIO-1 task-56] r.c.m.x.r.SubjectMapper.allSubject       : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject 
+2022-03-06 09:21:04.191 DEBUG 20672 --- [XNIO-1 task-56] r.c.m.x.r.SubjectMapper.allSubject       : ==> Parameters: 
+2022-03-06 09:21:04.192 DEBUG 20672 --- [XNIO-1 task-56] r.c.m.x.r.SubjectMapper.allSubject       : <==      Total: 5
+2022-03-06 09:25:32.102 DEBUG 20672 --- [XNIO-1 task-61] r.c.m.x.r.QuestionMapper.page_COUNT      : ==>  Preparing: SELECT count(0) FROM t_question WHERE deleted = 0 AND subject_id = ? 
+2022-03-06 09:25:32.102 DEBUG 20672 --- [XNIO-1 task-61] r.c.m.x.r.QuestionMapper.page_COUNT      : ==> Parameters: 2(Integer)
+2022-03-06 09:25:32.103 DEBUG 20672 --- [XNIO-1 task-61] r.c.m.x.r.QuestionMapper.page_COUNT      : <==      Total: 1
+2022-03-06 09:25:32.104 DEBUG 20672 --- [XNIO-1 task-61] r.c.m.x.repository.QuestionMapper.page   : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question WHERE deleted = 0 AND subject_id = ? order by id desc LIMIT ? 
+2022-03-06 09:25:32.104 DEBUG 20672 --- [XNIO-1 task-61] r.c.m.x.repository.QuestionMapper.page   : ==> Parameters: 2(Integer), 5(Integer)
+2022-03-06 09:25:32.105 DEBUG 20672 --- [XNIO-1 task-61] r.c.m.x.repository.QuestionMapper.page   : <==      Total: 1
+2022-03-06 09:25:36.697 DEBUG 20672 --- [XNIO-1 task-62] r.c.m.x.r.Q.selectByPrimaryKey           : ==>  Preparing: select id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted from t_question where id = ? 
+2022-03-06 09:25:36.697 DEBUG 20672 --- [XNIO-1 task-62] r.c.m.x.r.Q.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:25:36.698 DEBUG 20672 --- [XNIO-1 task-62] r.c.m.x.r.Q.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:25:47.127 DEBUG 20672 --- [XNIO-1 task-63] r.c.m.x.r.QuestionMapper.page_COUNT      : ==>  Preparing: SELECT count(0) FROM t_question WHERE deleted = 0 AND subject_id = ? 
+2022-03-06 09:25:47.127 DEBUG 20672 --- [XNIO-1 task-63] r.c.m.x.r.QuestionMapper.page_COUNT      : ==> Parameters: 2(Integer)
+2022-03-06 09:25:47.128 DEBUG 20672 --- [XNIO-1 task-63] r.c.m.x.r.QuestionMapper.page_COUNT      : <==      Total: 1
+2022-03-06 09:25:47.128 DEBUG 20672 --- [XNIO-1 task-63] r.c.m.x.repository.QuestionMapper.page   : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question WHERE deleted = 0 AND subject_id = ? order by id desc LIMIT ? 
+2022-03-06 09:25:47.129 DEBUG 20672 --- [XNIO-1 task-63] r.c.m.x.repository.QuestionMapper.page   : ==> Parameters: 2(Integer), 5(Integer)
+2022-03-06 09:25:47.130 DEBUG 20672 --- [XNIO-1 task-63] r.c.m.x.repository.QuestionMapper.page   : <==      Total: 1
+2022-03-06 09:25:49.252 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.T.insertSelective              : ==>  Preparing: insert into t_text_content ( content, create_time ) values ( ?, ? ) 
+2022-03-06 09:25:49.252 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.T.insertSelective              : ==> Parameters: [{"name":"选择题","questionItems":[{"id":1,"itemOrder":1}]}](String), 2022-03-06 09:25:49.248(Timestamp)
+2022-03-06 09:25:49.253 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.T.insertSelective              : <==    Updates: 1
+2022-03-06 09:25:49.253 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.S.selectByPrimaryKey           : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where id = ? 
+2022-03-06 09:25:49.254 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.S.selectByPrimaryKey           : ==> Parameters: 2(Integer)
+2022-03-06 09:25:49.255 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.S.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:25:49.721 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.E.insertSelective              : ==>  Preparing: insert into t_exam_paper ( name, subject_id, paper_type, grade_level, score, question_count, suggest_time, frame_text_content_id, create_user, create_time, deleted ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2022-03-06 09:25:49.721 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.E.insertSelective              : ==> Parameters: test(String), 2(Integer), 1(Integer), 10(Integer), 1000(Integer), 1(Integer), 10(Integer), 2(Integer), 2(Integer), 2022-03-06 09:25:49.248(Timestamp), false(Boolean)
+2022-03-06 09:25:49.722 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.E.insertSelective              : <==    Updates: 1
+2022-03-06 09:25:49.827 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id from t_exam_paper where id = ? 
+2022-03-06 09:25:49.827 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:25:49.828 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:25:49.829 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.T.selectByPrimaryKey           : ==>  Preparing: select id, content, create_time from t_text_content where id = ? 
+2022-03-06 09:25:49.829 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.T.selectByPrimaryKey           : ==> Parameters: 2(Integer)
+2022-03-06 09:25:49.830 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.T.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:25:49.833 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.QuestionMapper.selectByIds     : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question where id in ( ? ) 
+2022-03-06 09:25:49.833 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.QuestionMapper.selectByIds     : ==> Parameters: 1(Integer)
+2022-03-06 09:25:49.834 DEBUG 20672 --- [XNIO-1 task-64] r.c.m.x.r.QuestionMapper.selectByIds     : <==      Total: 1
+2022-03-06 09:25:50.407 DEBUG 20672 --- [XNIO-1 task-65] r.c.m.x.r.SubjectMapper.allSubject       : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject 
+2022-03-06 09:25:50.407 DEBUG 20672 --- [XNIO-1 task-65] r.c.m.x.r.SubjectMapper.allSubject       : ==> Parameters: 
+2022-03-06 09:25:50.408 DEBUG 20672 --- [XNIO-1 task-65] r.c.m.x.r.SubjectMapper.allSubject       : <==      Total: 5
+2022-03-06 09:25:50.721 DEBUG 20672 --- [XNIO-1 task-66] r.c.m.x.r.ExamPaperMapper.page_COUNT     : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 
+2022-03-06 09:25:50.721 DEBUG 20672 --- [XNIO-1 task-66] r.c.m.x.r.ExamPaperMapper.page_COUNT     : ==> Parameters: 
+2022-03-06 09:25:50.722 DEBUG 20672 --- [XNIO-1 task-66] r.c.m.x.r.ExamPaperMapper.page_COUNT     : <==      Total: 1
+2022-03-06 09:25:50.723 DEBUG 20672 --- [XNIO-1 task-66] r.c.m.x.repository.ExamPaperMapper.page  : ==>  Preparing: SELECT id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id FROM t_exam_paper WHERE deleted = 0 order by id desc LIMIT ? 
+2022-03-06 09:25:50.723 DEBUG 20672 --- [XNIO-1 task-66] r.c.m.x.repository.ExamPaperMapper.page  : ==> Parameters: 10(Integer)
+2022-03-06 09:25:50.724 DEBUG 20672 --- [XNIO-1 task-66] r.c.m.x.repository.ExamPaperMapper.page  : <==      Total: 1
+2022-03-06 09:25:54.044 DEBUG 20672 --- [XNIO-1 task-67] r.c.m.x.r.UserMapper.userPage_COUNT      : ==>  Preparing: SELECT count(0) FROM t_user WHERE deleted = 0 AND role = ? 
+2022-03-06 09:25:54.044 DEBUG 20672 --- [XNIO-1 task-67] r.c.m.x.r.UserMapper.userPage_COUNT      : ==> Parameters: 1(Integer)
+2022-03-06 09:25:54.045 DEBUG 20672 --- [XNIO-1 task-67] r.c.m.x.r.UserMapper.userPage_COUNT      : <==      Total: 1
+2022-03-06 09:25:54.046 DEBUG 20672 --- [XNIO-1 task-67] r.c.m.x.repository.UserMapper.userPage   : ==>  Preparing: SELECT id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id FROM t_user WHERE deleted = 0 AND role = ? order by id desc LIMIT ? 
+2022-03-06 09:25:54.046 DEBUG 20672 --- [XNIO-1 task-67] r.c.m.x.repository.UserMapper.userPage   : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:25:54.047 DEBUG 20672 --- [XNIO-1 task-67] r.c.m.x.repository.UserMapper.userPage   : <==      Total: 1
+2022-03-06 09:25:56.338 DEBUG 20672 --- [XNIO-1 task-68] r.c.m.x.r.UserMapper.getUserById         : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where id=? 
+2022-03-06 09:25:56.338 DEBUG 20672 --- [XNIO-1 task-68] r.c.m.x.r.UserMapper.getUserById         : ==> Parameters: 1(Integer)
+2022-03-06 09:25:56.339 DEBUG 20672 --- [XNIO-1 task-68] r.c.m.x.r.UserMapper.getUserById         : <==      Total: 1
+2022-03-06 09:26:01.670 DEBUG 20672 --- [XNIO-1 task-69] r.c.m.x.r.U.updateByPrimaryKeySelective  : ==>  Preparing: update t_user SET user_name = ?, real_name = ?, age = ?, sex = ?, birth_day = ?, user_level = ?, phone = ?, role = ?, status = ?, modify_time = ? where id = ? 
+2022-03-06 09:26:01.671 DEBUG 20672 --- [XNIO-1 task-69] r.c.m.x.r.U.updateByPrimaryKeySelective  : ==> Parameters: student(String), 学生(String), 18(Integer), 1(Integer), 2019-09-01 00:00:00.0(Timestamp), 10(Integer), 19171171610(String), 1(Integer), 1(Integer), 2022-03-06 09:26:01.666(Timestamp), 1(Integer)
+2022-03-06 09:26:01.825 DEBUG 20672 --- [XNIO-1 task-69] r.c.m.x.r.U.updateByPrimaryKeySelective  : <==    Updates: 1
+2022-03-06 09:26:02.385 DEBUG 20672 --- [XNIO-1 task-70] r.c.m.x.r.UserMapper.userPage_COUNT      : ==>  Preparing: SELECT count(0) FROM t_user WHERE deleted = 0 AND role = ? 
+2022-03-06 09:26:02.386 DEBUG 20672 --- [XNIO-1 task-70] r.c.m.x.r.UserMapper.userPage_COUNT      : ==> Parameters: 1(Integer)
+2022-03-06 09:26:02.386 DEBUG 20672 --- [XNIO-1 task-70] r.c.m.x.r.UserMapper.userPage_COUNT      : <==      Total: 1
+2022-03-06 09:26:02.387 DEBUG 20672 --- [XNIO-1 task-70] r.c.m.x.repository.UserMapper.userPage   : ==>  Preparing: SELECT id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id FROM t_user WHERE deleted = 0 AND role = ? order by id desc LIMIT ? 
+2022-03-06 09:26:02.387 DEBUG 20672 --- [XNIO-1 task-70] r.c.m.x.repository.UserMapper.userPage   : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:26:02.388 DEBUG 20672 --- [XNIO-1 task-70] r.c.m.x.repository.UserMapper.userPage   : <==      Total: 1
+2022-03-06 09:26:06.568 DEBUG 20672 --- [XNIO-1 task-75] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2022-03-06 09:26:06.568 DEBUG 20672 --- [XNIO-1 task-75] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2022-03-06 09:26:06.569 DEBUG 20672 --- [XNIO-1 task-75] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2022-03-06 09:26:06.572 DEBUG 20672 --- [XNIO-1 task-75] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 09:26:06.572 DEBUG 20672 --- [XNIO-1 task-75] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 登录了学之思开源考试系统(String), 2022-03-06 09:26:06.572(Timestamp)
+2022-03-06 09:26:07.465 DEBUG 20672 --- [XNIO-1 task-75] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 09:26:07.498 DEBUG 20672 --- [XNIO-1 task-76] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 09:26:07.498 DEBUG 20672 --- [XNIO-1 task-76] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 09:26:07.499 DEBUG 20672 --- [XNIO-1 task-76] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 09:26:07.811 DEBUG 20672 --- [XNIO-1 task-78] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:26:07.811 DEBUG 20672 --- [XNIO-1 task-78] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:26:07.811 DEBUG 20672 --- [XNIO-1 task-79] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:26:07.811 DEBUG 20672 --- [XNIO-1 task-79] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:26:07.812 DEBUG 20672 --- [XNIO-1 task-78] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:26:07.812 DEBUG 20672 --- [XNIO-1 task-79] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:26:07.814 DEBUG 20672 --- [XNIO-1 task-78] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:26:07.815 DEBUG 20672 --- [XNIO-1 task-78] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:26:07.812(Timestamp)
+2022-03-06 09:26:07.816 DEBUG 20672 --- [XNIO-1 task-78] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:26:12.671 DEBUG 20672 --- [XNIO-1 task-80] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:26:12.672 DEBUG 20672 --- [XNIO-1 task-80] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 10(Integer)
+2022-03-06 09:26:12.673 DEBUG 20672 --- [XNIO-1 task-80] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 5
+2022-03-06 09:26:12.740 DEBUG 20672 --- [XNIO-1 task-81] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:26:12.740 DEBUG 20672 --- [XNIO-1 task-81] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:26:12.741 DEBUG 20672 --- [XNIO-1 task-81] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:16.475 DEBUG 20672 --- [XNIO-1 task-82] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:26:16.475 DEBUG 20672 --- [XNIO-1 task-82] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 5(Integer), 1(Integer)
+2022-03-06 09:26:16.475 DEBUG 20672 --- [XNIO-1 task-82] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:16.988 DEBUG 20672 --- [XNIO-1 task-83] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:26:16.988 DEBUG 20672 --- [XNIO-1 task-83] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 4(Integer), 1(Integer)
+2022-03-06 09:26:16.989 DEBUG 20672 --- [XNIO-1 task-83] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:17.954 DEBUG 20672 --- [XNIO-1 task-84] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:26:17.955 DEBUG 20672 --- [XNIO-1 task-84] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 3(Integer), 1(Integer)
+2022-03-06 09:26:17.955 DEBUG 20672 --- [XNIO-1 task-84] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:18.218 DEBUG 20672 --- [XNIO-1 task-85] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:26:18.218 DEBUG 20672 --- [XNIO-1 task-85] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 2(Integer), 1(Integer)
+2022-03-06 09:26:18.219 DEBUG 20672 --- [XNIO-1 task-85] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:18.220 DEBUG 20672 --- [XNIO-1 task-85] r.c.m.x.r.ExamPaperMapper.studentPage    : ==>  Preparing: SELECT id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? order by id desc LIMIT ? 
+2022-03-06 09:26:18.220 DEBUG 20672 --- [XNIO-1 task-85] r.c.m.x.r.ExamPaperMapper.studentPage    : ==> Parameters: 2(Integer), 1(Integer), 10(Integer)
+2022-03-06 09:26:18.221 DEBUG 20672 --- [XNIO-1 task-85] r.c.m.x.r.ExamPaperMapper.studentPage    : <==      Total: 1
+2022-03-06 09:26:20.250 DEBUG 20672 --- [XNIO-1 task-86] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:26:20.250 DEBUG 20672 --- [XNIO-1 task-86] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 2(Integer), 4(Integer)
+2022-03-06 09:26:20.251 DEBUG 20672 --- [XNIO-1 task-86] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:21.868 DEBUG 20672 --- [XNIO-1 task-87] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:26:21.868 DEBUG 20672 --- [XNIO-1 task-87] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 2(Integer), 1(Integer)
+2022-03-06 09:26:21.869 DEBUG 20672 --- [XNIO-1 task-87] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:21.869 DEBUG 20672 --- [XNIO-1 task-87] r.c.m.x.r.ExamPaperMapper.studentPage    : ==>  Preparing: SELECT id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? order by id desc LIMIT ? 
+2022-03-06 09:26:21.869 DEBUG 20672 --- [XNIO-1 task-87] r.c.m.x.r.ExamPaperMapper.studentPage    : ==> Parameters: 2(Integer), 1(Integer), 10(Integer)
+2022-03-06 09:26:21.870 DEBUG 20672 --- [XNIO-1 task-87] r.c.m.x.r.ExamPaperMapper.studentPage    : <==      Total: 1
+2022-03-06 09:26:22.119 DEBUG 20672 --- [XNIO-1 task-88] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper_answer WHERE create_user = ? 
+2022-03-06 09:26:22.119 DEBUG 20672 --- [XNIO-1 task-88] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer)
+2022-03-06 09:26:22.120 DEBUG 20672 --- [XNIO-1 task-88] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:23.309 DEBUG 20672 --- [XNIO-1 task-89] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:26:23.309 DEBUG 20672 --- [XNIO-1 task-89] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 10(Integer)
+2022-03-06 09:26:23.311 DEBUG 20672 --- [XNIO-1 task-89] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 5
+2022-03-06 09:26:23.670 DEBUG 20672 --- [XNIO-1 task-90] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:26:23.670 DEBUG 20672 --- [XNIO-1 task-90] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:26:23.671 DEBUG 20672 --- [XNIO-1 task-90] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:23.918 DEBUG 20672 --- [XNIO-1 task-91] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper_answer WHERE create_user = ? 
+2022-03-06 09:26:23.918 DEBUG 20672 --- [XNIO-1 task-91] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer)
+2022-03-06 09:26:23.919 DEBUG 20672 --- [XNIO-1 task-91] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:24.236 DEBUG 20672 --- [XNIO-1 task-92] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper_question_customer_answer WHERE do_right = FALSE AND create_user = ? 
+2022-03-06 09:26:24.236 DEBUG 20672 --- [XNIO-1 task-92] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer)
+2022-03-06 09:26:24.237 DEBUG 20672 --- [XNIO-1 task-92] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:25.076 DEBUG 20672 --- [XNIO-1 task-93] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper_answer WHERE create_user = ? 
+2022-03-06 09:26:25.076 DEBUG 20672 --- [XNIO-1 task-93] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer)
+2022-03-06 09:26:25.076 DEBUG 20672 --- [XNIO-1 task-93] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:25.396 DEBUG 20672 --- [XNIO-1 task-94] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:26:25.396 DEBUG 20672 --- [XNIO-1 task-94] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 10(Integer)
+2022-03-06 09:26:25.397 DEBUG 20672 --- [XNIO-1 task-94] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 5
+2022-03-06 09:26:25.747 DEBUG 20672 --- [XNIO-1 task-95] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:26:25.747 DEBUG 20672 --- [XNIO-1 task-95] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:26:25.748 DEBUG 20672 --- [XNIO-1 task-95] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:26.010 DEBUG 20672 --- [XNIO-1 task-96] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper_question_customer_answer WHERE do_right = FALSE AND create_user = ? 
+2022-03-06 09:26:26.010 DEBUG 20672 --- [XNIO-1 task-96] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer)
+2022-03-06 09:26:26.010 DEBUG 20672 --- [XNIO-1 task-96] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:26.839 DEBUG 20672 --- [XNIO-1 task-97] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper_answer WHERE create_user = ? 
+2022-03-06 09:26:26.839 DEBUG 20672 --- [XNIO-1 task-97] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer)
+2022-03-06 09:26:26.840 DEBUG 20672 --- [XNIO-1 task-97] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:27.449 DEBUG 20672 --- [XNIO-1 task-98] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:26:27.450 DEBUG 20672 --- [XNIO-1 task-98] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 10(Integer)
+2022-03-06 09:26:27.450 DEBUG 20672 --- [XNIO-1 task-98] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 5
+2022-03-06 09:26:27.714 DEBUG 20672 --- [XNIO-1 task-99] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:26:27.714 DEBUG 20672 --- [XNIO-1 task-99] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:26:27.715 DEBUG 20672 --- [XNIO-1 task-99] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:27.791 DEBUG 20672 --- [XNIO-1 task-100] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:26:27.791 DEBUG 20672 --- [XNIO-1 task-100] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:26:27.791 DEBUG 20672 --- [XNIO-1 task-100] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:26:27.792 DEBUG 20672 --- [XNIO-1 task-100] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:26:27.792 DEBUG 20672 --- [XNIO-1 task-100] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:26:27.791(Timestamp)
+2022-03-06 09:26:27.792 DEBUG 20672 --- [XNIO-1 task-100] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:26:27.935 DEBUG 20672 --- [XNIO-1 task-101] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:26:27.935 DEBUG 20672 --- [XNIO-1 task-101] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:26:27.936 DEBUG 20672 --- [XNIO-1 task-101] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:26:29.543 DEBUG 20672 --- [XNIO-1 task-102] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:26:29.543 DEBUG 20672 --- [XNIO-1 task-102] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 10(Integer)
+2022-03-06 09:26:29.543 DEBUG 20672 --- [XNIO-1 task-102] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 5
+2022-03-06 09:26:29.583 DEBUG 20672 --- [XNIO-1 task-103] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:26:29.583 DEBUG 20672 --- [XNIO-1 task-103] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:26:29.584 DEBUG 20672 --- [XNIO-1 task-103] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:31.468 DEBUG 20672 --- [XNIO-1 task-104] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:26:31.469 DEBUG 20672 --- [XNIO-1 task-104] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 2(Integer), 1(Integer)
+2022-03-06 09:26:31.469 DEBUG 20672 --- [XNIO-1 task-104] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:31.470 DEBUG 20672 --- [XNIO-1 task-104] r.c.m.x.r.ExamPaperMapper.studentPage    : ==>  Preparing: SELECT id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? order by id desc LIMIT ? 
+2022-03-06 09:26:31.470 DEBUG 20672 --- [XNIO-1 task-104] r.c.m.x.r.ExamPaperMapper.studentPage    : ==> Parameters: 2(Integer), 1(Integer), 10(Integer)
+2022-03-06 09:26:31.471 DEBUG 20672 --- [XNIO-1 task-104] r.c.m.x.r.ExamPaperMapper.studentPage    : <==      Total: 1
+2022-03-06 09:26:35.150 DEBUG 20672 --- [XNIO-1 task-105] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id from t_exam_paper where id = ? 
+2022-03-06 09:26:35.150 DEBUG 20672 --- [XNIO-1 task-105] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:26:35.151 DEBUG 20672 --- [XNIO-1 task-105] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:26:35.152 DEBUG 20672 --- [XNIO-1 task-105] r.c.m.x.r.QuestionMapper.selectByIds     : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question where id in ( ? ) 
+2022-03-06 09:26:35.152 DEBUG 20672 --- [XNIO-1 task-105] r.c.m.x.r.QuestionMapper.selectByIds     : ==> Parameters: 1(Integer)
+2022-03-06 09:26:35.153 DEBUG 20672 --- [XNIO-1 task-105] r.c.m.x.r.QuestionMapper.selectByIds     : <==      Total: 1
+2022-03-06 09:26:55.159 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id from t_exam_paper where id = ? 
+2022-03-06 09:26:55.160 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:26:55.160 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:26:55.161 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.QuestionMapper.selectByIds     : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question where id in ( ? ) 
+2022-03-06 09:26:55.161 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.QuestionMapper.selectByIds     : ==> Parameters: 1(Integer)
+2022-03-06 09:26:55.162 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.QuestionMapper.selectByIds     : <==      Total: 1
+2022-03-06 09:26:55.518 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.E.insertSelective              : ==>  Preparing: insert into t_exam_paper_answer ( exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2022-03-06 09:26:55.519 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.E.insertSelective              : ==> Parameters: 1(Integer), test(String), 1(Integer), 2(Integer), 0(Integer), 0(Integer), 1000(Integer), 0(Integer), 1(Integer), 19(Integer), 2(Integer), 1(Integer), 2022-03-06 09:26:55.159(Timestamp)
+2022-03-06 09:26:55.519 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.E.insertSelective              : <==    Updates: 1
+2022-03-06 09:26:55.521 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.E.insertList                   : ==>  Preparing: insert into t_exam_paper_question_customer_answer ( question_id, question_score, subject_id, create_time, create_user, text_content_id, exam_paper_id, question_type, answer, customer_score, exam_paper_answer_id , do_right,question_text_content_id,item_order) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?) 
+2022-03-06 09:26:55.521 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.E.insertList                   : ==> Parameters: 1(Integer), 1000(Integer), 2(Integer), 2022-03-06 09:26:55.159(Timestamp), 1(Integer), null, 1(Integer), 1(Integer), A(String), 0(Integer), 1(Integer), false(Boolean), 1(Integer), 1(Integer)
+2022-03-06 09:26:55.522 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.E.insertList                   : <==    Updates: 1
+2022-03-06 09:26:55.575 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 09:26:55.576 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 提交试卷：test 得分：0 耗时：19 秒(String), 2022-03-06 09:26:55.516(Timestamp)
+2022-03-06 09:26:55.632 DEBUG 20672 --- [XNIO-1 task-106] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 09:26:57.194 DEBUG 20672 --- [XNIO-1 task-108] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 09:26:57.195 DEBUG 20672 --- [XNIO-1 task-108] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 09:26:57.196 DEBUG 20672 --- [XNIO-1 task-108] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 09:26:57.203 DEBUG 20672 --- [XNIO-1 task-109] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper_answer WHERE create_user = ? 
+2022-03-06 09:26:57.203 DEBUG 20672 --- [XNIO-1 task-109] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer)
+2022-03-06 09:26:57.204 DEBUG 20672 --- [XNIO-1 task-109] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:26:57.205 DEBUG 20672 --- [XNIO-1 task-109] r.c.m.x.r.E.studentPage                  : ==>  Preparing: SELECT id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id FROM t_exam_paper_answer WHERE create_user = ? order by id desc LIMIT ? 
+2022-03-06 09:26:57.206 DEBUG 20672 --- [XNIO-1 task-109] r.c.m.x.r.E.studentPage                  : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:26:57.209 DEBUG 20672 --- [XNIO-1 task-109] r.c.m.x.r.E.studentPage                  : <==      Total: 1
+2022-03-06 09:26:57.213 DEBUG 20672 --- [XNIO-1 task-109] r.c.m.x.r.S.selectByPrimaryKey           : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where id = ? 
+2022-03-06 09:26:57.214 DEBUG 20672 --- [XNIO-1 task-109] r.c.m.x.r.S.selectByPrimaryKey           : ==> Parameters: 2(Integer)
+2022-03-06 09:26:57.216 DEBUG 20672 --- [XNIO-1 task-109] r.c.m.x.r.S.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:27:02.349 DEBUG 20672 --- [XNIO-1 task-110] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:27:02.349 DEBUG 20672 --- [XNIO-1 task-111] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:27:02.349 DEBUG 20672 --- [XNIO-1 task-110] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:27:02.349 DEBUG 20672 --- [XNIO-1 task-111] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:27:02.350 DEBUG 20672 --- [XNIO-1 task-111] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:27:02.350 DEBUG 20672 --- [XNIO-1 task-110] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:27:02.350 DEBUG 20672 --- [XNIO-1 task-110] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:27:02.351 DEBUG 20672 --- [XNIO-1 task-110] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:27:02.35(Timestamp)
+2022-03-06 09:27:02.352 DEBUG 20672 --- [XNIO-1 task-110] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:27:04.802 DEBUG 20672 --- [XNIO-1 task-112] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper_answer WHERE create_user = ? 
+2022-03-06 09:27:04.803 DEBUG 20672 --- [XNIO-1 task-112] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer)
+2022-03-06 09:27:04.803 DEBUG 20672 --- [XNIO-1 task-112] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:27:04.804 DEBUG 20672 --- [XNIO-1 task-112] r.c.m.x.r.E.studentPage                  : ==>  Preparing: SELECT id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id FROM t_exam_paper_answer WHERE create_user = ? order by id desc LIMIT ? 
+2022-03-06 09:27:04.804 DEBUG 20672 --- [XNIO-1 task-112] r.c.m.x.r.E.studentPage                  : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:27:04.805 DEBUG 20672 --- [XNIO-1 task-112] r.c.m.x.r.E.studentPage                  : <==      Total: 1
+2022-03-06 09:27:06.860 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id from t_exam_paper_answer where id = ? 
+2022-03-06 09:27:06.860 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:27:06.861 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:27:06.861 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id from t_exam_paper where id = ? 
+2022-03-06 09:27:06.862 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:27:06.862 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:27:06.863 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.QuestionMapper.selectByIds     : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question where id in ( ? ) 
+2022-03-06 09:27:06.863 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.QuestionMapper.selectByIds     : ==> Parameters: 1(Integer)
+2022-03-06 09:27:06.864 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.QuestionMapper.selectByIds     : <==      Total: 1
+2022-03-06 09:27:06.865 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id from t_exam_paper_answer where id = ? 
+2022-03-06 09:27:06.865 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:27:06.866 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:27:06.866 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.E.selectListByPaperAnswerId    : ==>  Preparing: select id, question_id, exam_paper_id, exam_paper_answer_id, question_type, subject_id, customer_score, question_score, question_text_content_id, answer, text_content_id, do_right, create_user, create_time, item_order from t_exam_paper_question_customer_answer where exam_paper_answer_id = ? order by item_order 
+2022-03-06 09:27:06.866 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.E.selectListByPaperAnswerId    : ==> Parameters: 1(Integer)
+2022-03-06 09:27:06.867 DEBUG 20672 --- [XNIO-1 task-113] r.c.m.x.r.E.selectListByPaperAnswerId    : <==      Total: 1
+2022-03-06 09:27:14.417 DEBUG 20672 --- [XNIO-1 task-114] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper_question_customer_answer WHERE do_right = FALSE AND create_user = ? 
+2022-03-06 09:27:14.418 DEBUG 20672 --- [XNIO-1 task-114] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer)
+2022-03-06 09:27:14.418 DEBUG 20672 --- [XNIO-1 task-114] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:27:14.419 DEBUG 20672 --- [XNIO-1 task-114] r.c.m.x.r.E.studentPage                  : ==>  Preparing: SELECT id, question_id, exam_paper_id, exam_paper_answer_id, question_type, subject_id, customer_score, question_score, question_text_content_id, answer, text_content_id, do_right, create_user, create_time, item_order FROM t_exam_paper_question_customer_answer WHERE do_right = FALSE AND create_user = ? order by id desc LIMIT ? 
+2022-03-06 09:27:14.419 DEBUG 20672 --- [XNIO-1 task-114] r.c.m.x.r.E.studentPage                  : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:27:14.420 DEBUG 20672 --- [XNIO-1 task-114] r.c.m.x.r.E.studentPage                  : <==      Total: 1
+2022-03-06 09:27:14.440 DEBUG 20672 --- [XNIO-1 task-115] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, question_id, exam_paper_id, exam_paper_answer_id, question_type, subject_id, customer_score, question_score, question_text_content_id, answer, text_content_id, do_right, create_user, create_time, item_order from t_exam_paper_question_customer_answer where id = ? 
+2022-03-06 09:27:14.440 DEBUG 20672 --- [XNIO-1 task-115] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:27:14.441 DEBUG 20672 --- [XNIO-1 task-115] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:27:14.441 DEBUG 20672 --- [XNIO-1 task-115] r.c.m.x.r.Q.selectByPrimaryKey           : ==>  Preparing: select id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted from t_question where id = ? 
+2022-03-06 09:27:14.441 DEBUG 20672 --- [XNIO-1 task-115] r.c.m.x.r.Q.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:27:14.442 DEBUG 20672 --- [XNIO-1 task-115] r.c.m.x.r.Q.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:27:31.613 DEBUG 20672 --- [XNIO-1 task-117] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 09:27:31.614 DEBUG 20672 --- [XNIO-1 task-117] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2022-03-06 09:27:31.612(Timestamp)
+2022-03-06 09:27:32.035 DEBUG 20672 --- [XNIO-1 task-117] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 09:27:32.413 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2022-03-06 09:27:32.414 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:27:32.415 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:27:32.416 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2022-03-06 09:27:32.416 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2022-03-06 09:27:32.417 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2022-03-06 09:27:32.417 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2022-03-06 09:27:32.417 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:27:32.418 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:27:32.418 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2022-03-06 09:27:32.419 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:27:32.420 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:27:32.420 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2022-03-06 09:27:32.420 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.U.selectCountByDate            : ==> Parameters: 2022-03-01 00:00:00.0(Timestamp), 2022-03-31 23:59:59.0(Timestamp)
+2022-03-06 09:27:32.422 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.U.selectCountByDate            : <==      Total: 2
+2022-03-06 09:27:32.422 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2022-03-06 09:27:32.423 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.E.selectCountByDate            : ==> Parameters: 2022-03-01 00:00:00.0(Timestamp), 2022-03-31 23:59:59.0(Timestamp)
+2022-03-06 09:27:32.424 DEBUG 20672 --- [XNIO-1 task-118] r.c.m.x.r.E.selectCountByDate            : <==      Total: 1
+2022-03-06 09:27:38.708 DEBUG 20672 --- [XNIO-1 task-119] r.c.m.x.r.SubjectMapper.allSubject       : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject 
+2022-03-06 09:27:38.708 DEBUG 20672 --- [XNIO-1 task-119] r.c.m.x.r.SubjectMapper.allSubject       : ==> Parameters: 
+2022-03-06 09:27:38.709 DEBUG 20672 --- [XNIO-1 task-119] r.c.m.x.r.SubjectMapper.allSubject       : <==      Total: 5
+2022-03-06 09:27:39.015 DEBUG 20672 --- [XNIO-1 task-120] r.c.m.x.r.E.adminPage_COUNT              : ==>  Preparing: SELECT count(0) FROM t_exam_paper_answer 
+2022-03-06 09:27:39.015 DEBUG 20672 --- [XNIO-1 task-120] r.c.m.x.r.E.adminPage_COUNT              : ==> Parameters: 
+2022-03-06 09:27:39.016 DEBUG 20672 --- [XNIO-1 task-120] r.c.m.x.r.E.adminPage_COUNT              : <==      Total: 1
+2022-03-06 09:27:39.016 DEBUG 20672 --- [XNIO-1 task-120] r.c.m.x.r.E.adminPage                    : ==>  Preparing: SELECT id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id FROM t_exam_paper_answer order by id desc LIMIT ? 
+2022-03-06 09:27:39.016 DEBUG 20672 --- [XNIO-1 task-120] r.c.m.x.r.E.adminPage                    : ==> Parameters: 10(Integer)
+2022-03-06 09:27:39.017 DEBUG 20672 --- [XNIO-1 task-120] r.c.m.x.r.E.adminPage                    : <==      Total: 1
+2022-03-06 09:27:39.018 DEBUG 20672 --- [XNIO-1 task-120] r.c.m.x.r.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where id = ? 
+2022-03-06 09:27:39.018 DEBUG 20672 --- [XNIO-1 task-120] r.c.m.x.r.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Integer)
+2022-03-06 09:27:39.019 DEBUG 20672 --- [XNIO-1 task-120] r.c.m.x.r.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2022-03-06 09:27:47.217 DEBUG 20672 --- [XNIO-1 task-121] r.c.m.x.r.MessageMapper.page_COUNT       : ==>  Preparing: SELECT count(0) FROM t_message 
+2022-03-06 09:27:47.217 DEBUG 20672 --- [XNIO-1 task-121] r.c.m.x.r.MessageMapper.page_COUNT       : ==> Parameters: 
+2022-03-06 09:27:47.218 DEBUG 20672 --- [XNIO-1 task-121] r.c.m.x.r.MessageMapper.page_COUNT       : <==      Total: 1
+2022-03-06 09:28:13.724 DEBUG 20672 --- [XNIO-1 task-122] r.c.m.x.r.UserMapper.selectByUserName    : ==>  Preparing: SELECT id as value,user_name as name from t_user where deleted=0 and user_name like concat('%',?,'%') limit 5 
+2022-03-06 09:28:13.724 DEBUG 20672 --- [XNIO-1 task-122] r.c.m.x.r.UserMapper.selectByUserName    : ==> Parameters: student(String)
+2022-03-06 09:28:14.074 DEBUG 20672 --- [XNIO-1 task-122] r.c.m.x.r.UserMapper.selectByUserName    : <==      Total: 1
+2022-03-06 09:28:17.235 DEBUG 20672 --- [XNIO-1 task-123] r.c.m.x.r.UserMapper.selectByIds         : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where id in ( ? ) 
+2022-03-06 09:28:17.235 DEBUG 20672 --- [XNIO-1 task-123] r.c.m.x.r.UserMapper.selectByIds         : ==> Parameters: 1(Integer)
+2022-03-06 09:28:17.236 DEBUG 20672 --- [XNIO-1 task-123] r.c.m.x.r.UserMapper.selectByIds         : <==      Total: 1
+2022-03-06 09:28:17.237 DEBUG 20672 --- [XNIO-1 task-123] r.c.m.x.r.MessageMapper.insertSelective  : ==>  Preparing: insert into t_message ( title, content, create_time, send_user_id, send_user_name, send_real_name, receive_user_count, read_count ) values ( ?, ?, ?, ?, ?, ?, ?, ? ) 
+2022-03-06 09:28:17.237 DEBUG 20672 --- [XNIO-1 task-123] r.c.m.x.r.MessageMapper.insertSelective  : ==> Parameters: 来我办公室一趟(String), 来我办公室一趟(String), 2022-03-06 09:28:17.236(Timestamp), 2(Integer), admin(String), 管理员(String), 1(Integer), 0(Integer)
+2022-03-06 09:28:17.238 DEBUG 20672 --- [XNIO-1 task-123] r.c.m.x.r.MessageMapper.insertSelective  : <==    Updates: 1
+2022-03-06 09:28:17.239 DEBUG 20672 --- [XNIO-1 task-123] r.c.m.x.r.MessageUserMapper.inserts      : ==>  Preparing: insert into t_message_user (message_id, receive_user_id, receive_user_name, receive_real_name, readed, create_time) values (?, ?, ?, ?, ?, ?) 
+2022-03-06 09:28:17.239 DEBUG 20672 --- [XNIO-1 task-123] r.c.m.x.r.MessageUserMapper.inserts      : ==> Parameters: 1(Integer), 1(Integer), student(String), 学生(String), false(Boolean), 2022-03-06 09:28:17.236(Timestamp)
+2022-03-06 09:28:17.240 DEBUG 20672 --- [XNIO-1 task-123] r.c.m.x.r.MessageUserMapper.inserts      : <==    Updates: 1
+2022-03-06 09:28:18.253 DEBUG 20672 --- [XNIO-1 task-124] r.c.m.x.r.MessageMapper.page_COUNT       : ==>  Preparing: SELECT count(0) FROM t_message 
+2022-03-06 09:28:18.253 DEBUG 20672 --- [XNIO-1 task-124] r.c.m.x.r.MessageMapper.page_COUNT       : ==> Parameters: 
+2022-03-06 09:28:18.254 DEBUG 20672 --- [XNIO-1 task-124] r.c.m.x.r.MessageMapper.page_COUNT       : <==      Total: 1
+2022-03-06 09:28:18.255 DEBUG 20672 --- [XNIO-1 task-124] r.c.m.xzs.repository.MessageMapper.page  : ==>  Preparing: SELECT id, title, content, create_time, send_user_id, send_user_name, send_real_name, receive_user_count, read_count FROM t_message order by id desc LIMIT ? 
+2022-03-06 09:28:18.255 DEBUG 20672 --- [XNIO-1 task-124] r.c.m.xzs.repository.MessageMapper.page  : ==> Parameters: 10(Integer)
+2022-03-06 09:28:18.256 DEBUG 20672 --- [XNIO-1 task-124] r.c.m.xzs.repository.MessageMapper.page  : <==      Total: 1
+2022-03-06 09:28:18.256 DEBUG 20672 --- [XNIO-1 task-124] r.c.m.x.r.M.selectByMessageIds           : ==>  Preparing: select id, message_id, receive_user_id, receive_user_name, receive_real_name, readed, create_time, read_time from t_message_user where message_id in ( ? ) 
+2022-03-06 09:28:18.256 DEBUG 20672 --- [XNIO-1 task-124] r.c.m.x.r.M.selectByMessageIds           : ==> Parameters: 1(Integer)
+2022-03-06 09:28:18.257 DEBUG 20672 --- [XNIO-1 task-124] r.c.m.x.r.M.selectByMessageIds           : <==      Total: 1
+2022-03-06 09:28:22.919 DEBUG 20672 --- [XNIO-1 task-127] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 09:28:22.919 DEBUG 20672 --- [XNIO-1 task-127] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 登录了学之思开源考试系统(String), 2022-03-06 09:28:22.917(Timestamp)
+2022-03-06 09:28:23.066 DEBUG 20672 --- [XNIO-1 task-127] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 09:28:23.103 DEBUG 20672 --- [XNIO-1 task-128] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 09:28:23.104 DEBUG 20672 --- [XNIO-1 task-128] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 09:28:23.108 DEBUG 20672 --- [XNIO-1 task-130] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:28:23.109 DEBUG 20672 --- [XNIO-1 task-130] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:28:23.110 DEBUG 20672 --- [XNIO-1 task-130] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:28:23.111 DEBUG 20672 --- [XNIO-1 task-130] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:28:23.111 DEBUG 20672 --- [XNIO-1 task-130] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:28:23.111(Timestamp)
+2022-03-06 09:28:23.112 DEBUG 20672 --- [XNIO-1 task-130] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:28:23.146 DEBUG 20672 --- [XNIO-1 task-128] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 09:28:23.415 DEBUG 20672 --- [XNIO-1 task-131] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:28:23.417 DEBUG 20672 --- [XNIO-1 task-131] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:28:23.417 DEBUG 20672 --- [XNIO-1 task-131] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:28:25.688 DEBUG 20672 --- [XNIO-1 task-132] r.c.m.x.r.M.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_message_user WHERE receive_user_id = ? 
+2022-03-06 09:28:25.689 DEBUG 20672 --- [XNIO-1 task-132] r.c.m.x.r.M.studentPage_COUNT            : ==> Parameters: 1(Integer)
+2022-03-06 09:28:25.690 DEBUG 20672 --- [XNIO-1 task-132] r.c.m.x.r.M.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:28:25.692 DEBUG 20672 --- [XNIO-1 task-132] r.c.m.x.r.MessageUserMapper.studentPage  : ==>  Preparing: SELECT id, message_id, receive_user_id, receive_user_name, receive_real_name, readed, create_time, read_time FROM t_message_user WHERE receive_user_id = ? order by id desc LIMIT ? 
+2022-03-06 09:28:25.692 DEBUG 20672 --- [XNIO-1 task-132] r.c.m.x.r.MessageUserMapper.studentPage  : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:28:25.693 DEBUG 20672 --- [XNIO-1 task-132] r.c.m.x.r.MessageUserMapper.studentPage  : <==      Total: 1
+2022-03-06 09:28:25.694 DEBUG 20672 --- [XNIO-1 task-132] r.c.m.x.r.MessageMapper.selectByIds      : ==>  Preparing: select id, title, content, create_time, send_user_id, send_user_name, send_real_name, receive_user_count, read_count from t_message where id in ( ? ) 
+2022-03-06 09:28:25.694 DEBUG 20672 --- [XNIO-1 task-132] r.c.m.x.r.MessageMapper.selectByIds      : ==> Parameters: 1(Integer)
+2022-03-06 09:28:25.695 DEBUG 20672 --- [XNIO-1 task-132] r.c.m.x.r.MessageMapper.selectByIds      : <==      Total: 1
+2022-03-06 09:28:28.179 DEBUG 20672 --- [XNIO-1 task-133] r.c.m.x.r.M.selectByPrimaryKey           : ==>  Preparing: select id, message_id, receive_user_id, receive_user_name, receive_real_name, readed, create_time, read_time from t_message_user where id = ? 
+2022-03-06 09:28:28.179 DEBUG 20672 --- [XNIO-1 task-133] r.c.m.x.r.M.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:28:28.179 DEBUG 20672 --- [XNIO-1 task-133] r.c.m.x.r.M.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:28:28.180 DEBUG 20672 --- [XNIO-1 task-133] r.c.m.x.r.M.updateByPrimaryKeySelective  : ==>  Preparing: update t_message_user SET message_id = ?, receive_user_id = ?, receive_user_name = ?, receive_real_name = ?, readed = ?, create_time = ?, read_time = ? where id = ? 
+2022-03-06 09:28:28.181 DEBUG 20672 --- [XNIO-1 task-133] r.c.m.x.r.M.updateByPrimaryKeySelective  : ==> Parameters: 1(Integer), 1(Integer), student(String), 学生(String), true(Boolean), 2022-03-06 09:28:17.0(Timestamp), 2022-03-06 09:28:28.179(Timestamp), 1(Integer)
+2022-03-06 09:28:28.182 DEBUG 20672 --- [XNIO-1 task-133] r.c.m.x.r.M.updateByPrimaryKeySelective  : <==    Updates: 1
+2022-03-06 09:28:28.183 DEBUG 20672 --- [XNIO-1 task-133] r.c.m.x.r.MessageMapper.readAdd          : ==>  Preparing: UPDATE t_message SET read_count = read_count + 1 WHERE id= ? and read_count = (SELECT m.read_count from ( SELECT read_count FROM t_message WHERE id = ? ) m) 
+2022-03-06 09:28:28.183 DEBUG 20672 --- [XNIO-1 task-133] r.c.m.x.r.MessageMapper.readAdd          : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:28:28.184 DEBUG 20672 --- [XNIO-1 task-133] r.c.m.x.r.MessageMapper.readAdd          : <==    Updates: 1
+2022-03-06 09:28:35.960 DEBUG 20672 --- [XNIO-1 task-134] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:28:35.961 DEBUG 20672 --- [XNIO-1 task-134] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:28:35.962 DEBUG 20672 --- [XNIO-1 task-134] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:28:35.962 DEBUG 20672 --- [XNIO-1 task-134] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:28:35.963 DEBUG 20672 --- [XNIO-1 task-134] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:28:35.962(Timestamp)
+2022-03-06 09:28:35.964 DEBUG 20672 --- [XNIO-1 task-134] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:28:36.263 DEBUG 20672 --- [XNIO-1 task-135] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:28:36.263 DEBUG 20672 --- [XNIO-1 task-135] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:28:36.264 DEBUG 20672 --- [XNIO-1 task-135] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:28:36.841 DEBUG 20672 --- [XNIO-1 task-136] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:28:36.842 DEBUG 20672 --- [XNIO-1 task-136] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 10(Integer)
+2022-03-06 09:28:36.842 DEBUG 20672 --- [XNIO-1 task-136] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 5
+2022-03-06 09:28:37.106 DEBUG 20672 --- [XNIO-1 task-137] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:28:37.107 DEBUG 20672 --- [XNIO-1 task-137] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:28:37.107 DEBUG 20672 --- [XNIO-1 task-137] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:28:37.199 DEBUG 20672 --- [XNIO-1 task-138] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper_answer WHERE create_user = ? 
+2022-03-06 09:28:37.200 DEBUG 20672 --- [XNIO-1 task-138] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer)
+2022-03-06 09:28:37.200 DEBUG 20672 --- [XNIO-1 task-138] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:28:37.201 DEBUG 20672 --- [XNIO-1 task-138] r.c.m.x.r.E.studentPage                  : ==>  Preparing: SELECT id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id FROM t_exam_paper_answer WHERE create_user = ? order by id desc LIMIT ? 
+2022-03-06 09:28:37.201 DEBUG 20672 --- [XNIO-1 task-138] r.c.m.x.r.E.studentPage                  : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:28:37.202 DEBUG 20672 --- [XNIO-1 task-138] r.c.m.x.r.E.studentPage                  : <==      Total: 1
+2022-03-06 09:28:37.961 DEBUG 20672 --- [XNIO-1 task-139] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:28:37.962 DEBUG 20672 --- [XNIO-1 task-139] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 10(Integer)
+2022-03-06 09:28:37.962 DEBUG 20672 --- [XNIO-1 task-139] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 5
+2022-03-06 09:28:38.314 DEBUG 20672 --- [XNIO-1 task-140] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:28:38.314 DEBUG 20672 --- [XNIO-1 task-140] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:28:38.315 DEBUG 20672 --- [XNIO-1 task-140] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:28:38.579 DEBUG 20672 --- [XNIO-1 task-141] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:28:38.580 DEBUG 20672 --- [XNIO-1 task-141] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:28:38.580 DEBUG 20672 --- [XNIO-1 task-142] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:28:38.580 DEBUG 20672 --- [XNIO-1 task-142] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:28:38.580 DEBUG 20672 --- [XNIO-1 task-141] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:28:38.580 DEBUG 20672 --- [XNIO-1 task-142] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:28:38.580 DEBUG 20672 --- [XNIO-1 task-142] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:28:38.581 DEBUG 20672 --- [XNIO-1 task-142] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:28:38.58(Timestamp)
+2022-03-06 09:28:38.581 DEBUG 20672 --- [XNIO-1 task-142] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:28:40.992 DEBUG 20672 --- [XNIO-1 task-143] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:28:40.992 DEBUG 20672 --- [XNIO-1 task-143] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 10(Integer)
+2022-03-06 09:28:40.993 DEBUG 20672 --- [XNIO-1 task-143] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 5
+2022-03-06 09:28:41.343 DEBUG 20672 --- [XNIO-1 task-144] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:28:41.343 DEBUG 20672 --- [XNIO-1 task-144] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:28:41.344 DEBUG 20672 --- [XNIO-1 task-144] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:28:41.606 DEBUG 20672 --- [XNIO-1 task-145] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:28:41.607 DEBUG 20672 --- [XNIO-1 task-145] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:28:41.607 DEBUG 20672 --- [XNIO-1 task-146] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:28:41.607 DEBUG 20672 --- [XNIO-1 task-146] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:28:41.607 DEBUG 20672 --- [XNIO-1 task-146] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:28:41.607 DEBUG 20672 --- [XNIO-1 task-145] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:28:41.607 DEBUG 20672 --- [XNIO-1 task-145] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:28:41.608 DEBUG 20672 --- [XNIO-1 task-145] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:28:41.607(Timestamp)
+2022-03-06 09:28:41.608 DEBUG 20672 --- [XNIO-1 task-145] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:29:37.239 DEBUG 20672 --- [XNIO-1 task-152] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 09:29:37.240 DEBUG 20672 --- [XNIO-1 task-152] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2022-03-06 09:29:37.239(Timestamp)
+2022-03-06 09:29:37.291 DEBUG 20672 --- [XNIO-1 task-152] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 09:29:37.506 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2022-03-06 09:29:37.506 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:29:37.507 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:29:37.507 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2022-03-06 09:29:37.507 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2022-03-06 09:29:37.508 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2022-03-06 09:29:37.509 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2022-03-06 09:29:37.509 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:29:37.509 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:29:37.510 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2022-03-06 09:29:37.510 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:29:37.510 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:29:37.511 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2022-03-06 09:29:37.511 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.U.selectCountByDate            : ==> Parameters: 2022-03-01 00:00:00.0(Timestamp), 2022-03-31 23:59:59.0(Timestamp)
+2022-03-06 09:29:37.511 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.U.selectCountByDate            : <==      Total: 2
+2022-03-06 09:29:37.512 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2022-03-06 09:29:37.512 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.E.selectCountByDate            : ==> Parameters: 2022-03-01 00:00:00.0(Timestamp), 2022-03-31 23:59:59.0(Timestamp)
+2022-03-06 09:29:37.513 DEBUG 20672 --- [XNIO-1 task-153] r.c.m.x.r.E.selectCountByDate            : <==      Total: 1
+2022-03-06 09:29:49.421 DEBUG 20672 --- [XNIO-1 task-154] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 09:29:49.422 DEBUG 20672 --- [XNIO-1 task-154] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 登录了学之思开源考试系统(String), 2022-03-06 09:29:49.421(Timestamp)
+2022-03-06 09:29:49.587 DEBUG 20672 --- [XNIO-1 task-154] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 09:29:49.618 DEBUG 20672 --- [XNIO-1 task-155] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 09:29:49.618 DEBUG 20672 --- [XNIO-1 task-155] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 09:29:49.619 DEBUG 20672 --- [XNIO-1 task-155] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 09:29:49.918 DEBUG 20672 --- [XNIO-1 task-157] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:29:49.918 DEBUG 20672 --- [XNIO-1 task-157] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:29:49.918 DEBUG 20672 --- [XNIO-1 task-158] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:29:49.919 DEBUG 20672 --- [XNIO-1 task-158] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:29:49.919 DEBUG 20672 --- [XNIO-1 task-157] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:29:49.919 DEBUG 20672 --- [XNIO-1 task-158] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:29:49.919 DEBUG 20672 --- [XNIO-1 task-157] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:29:49.919 DEBUG 20672 --- [XNIO-1 task-157] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:29:49.919(Timestamp)
+2022-03-06 09:29:49.920 DEBUG 20672 --- [XNIO-1 task-157] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:34:48.916 DEBUG 20672 --- [XNIO-1 task-159] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:34:48.916 DEBUG 20672 --- [XNIO-1 task-159] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 10(Integer)
+2022-03-06 09:34:48.917 DEBUG 20672 --- [XNIO-1 task-159] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 5
+2022-03-06 09:34:48.973 DEBUG 20672 --- [XNIO-1 task-160] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:34:48.973 DEBUG 20672 --- [XNIO-1 task-160] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:34:48.974 DEBUG 20672 --- [XNIO-1 task-160] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:36:17.396 DEBUG 20672 --- [XNIO-1 task-162] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:36:17.396 DEBUG 20672 --- [XNIO-1 task-161] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:36:17.396 DEBUG 20672 --- [XNIO-1 task-162] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:36:17.396 DEBUG 20672 --- [XNIO-1 task-161] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:36:17.397 DEBUG 20672 --- [XNIO-1 task-162] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:36:17.397 DEBUG 20672 --- [XNIO-1 task-161] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:36:17.398 DEBUG 20672 --- [XNIO-1 task-161] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:36:17.398 DEBUG 20672 --- [XNIO-1 task-161] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:36:17.397(Timestamp)
+2022-03-06 09:36:17.398 DEBUG 20672 --- [XNIO-1 task-161] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:36:19.528 DEBUG 20672 --- [XNIO-1 task-163] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id from t_exam_paper where id = ? 
+2022-03-06 09:36:19.529 DEBUG 20672 --- [XNIO-1 task-163] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:36:19.529 DEBUG 20672 --- [XNIO-1 task-163] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:36:19.530 DEBUG 20672 --- [XNIO-1 task-163] r.c.m.x.r.QuestionMapper.selectByIds     : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question where id in ( ? ) 
+2022-03-06 09:36:19.530 DEBUG 20672 --- [XNIO-1 task-163] r.c.m.x.r.QuestionMapper.selectByIds     : ==> Parameters: 1(Integer)
+2022-03-06 09:36:19.531 DEBUG 20672 --- [XNIO-1 task-163] r.c.m.x.r.QuestionMapper.selectByIds     : <==      Total: 1
+2022-03-06 09:36:41.252 DEBUG 20672 --- [XNIO-1 task-164] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:36:41.252 DEBUG 20672 --- [XNIO-1 task-164] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 10(Integer)
+2022-03-06 09:36:41.253 DEBUG 20672 --- [XNIO-1 task-164] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 5
+2022-03-06 09:36:41.504 DEBUG 20672 --- [XNIO-1 task-165] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:36:41.504 DEBUG 20672 --- [XNIO-1 task-165] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:36:41.505 DEBUG 20672 --- [XNIO-1 task-165] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:36:42.933 DEBUG 20672 --- [XNIO-1 task-166] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:36:42.933 DEBUG 20672 --- [XNIO-1 task-166] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 2(Integer), 1(Integer)
+2022-03-06 09:36:42.933 DEBUG 20672 --- [XNIO-1 task-166] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:36:42.934 DEBUG 20672 --- [XNIO-1 task-166] r.c.m.x.r.ExamPaperMapper.studentPage    : ==>  Preparing: SELECT id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? order by id desc LIMIT ? 
+2022-03-06 09:36:42.934 DEBUG 20672 --- [XNIO-1 task-166] r.c.m.x.r.ExamPaperMapper.studentPage    : ==> Parameters: 2(Integer), 1(Integer), 10(Integer)
+2022-03-06 09:36:42.934 DEBUG 20672 --- [XNIO-1 task-166] r.c.m.x.r.ExamPaperMapper.studentPage    : <==      Total: 1
+2022-03-06 09:36:48.809 DEBUG 20672 --- [XNIO-1 task-167] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 09:36:48.809 DEBUG 20672 --- [XNIO-1 task-167] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 09:36:48.810 DEBUG 20672 --- [XNIO-1 task-167] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 09:36:48.810 DEBUG 20672 --- [XNIO-1 task-168] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:36:48.811 DEBUG 20672 --- [XNIO-1 task-168] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 10(Integer)
+2022-03-06 09:36:48.812 DEBUG 20672 --- [XNIO-1 task-168] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 5
+2022-03-06 09:36:48.888 DEBUG 20672 --- [XNIO-1 task-170] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:36:48.888 DEBUG 20672 --- [XNIO-1 task-170] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:36:48.889 DEBUG 20672 --- [XNIO-1 task-170] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:36:50.899 DEBUG 20672 --- [XNIO-1 task-171] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:36:50.899 DEBUG 20672 --- [XNIO-1 task-171] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 2(Integer), 1(Integer)
+2022-03-06 09:36:50.900 DEBUG 20672 --- [XNIO-1 task-171] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:36:50.900 DEBUG 20672 --- [XNIO-1 task-171] r.c.m.x.r.ExamPaperMapper.studentPage    : ==>  Preparing: SELECT id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? order by id desc LIMIT ? 
+2022-03-06 09:36:50.900 DEBUG 20672 --- [XNIO-1 task-171] r.c.m.x.r.ExamPaperMapper.studentPage    : ==> Parameters: 2(Integer), 1(Integer), 10(Integer)
+2022-03-06 09:36:50.901 DEBUG 20672 --- [XNIO-1 task-171] r.c.m.x.r.ExamPaperMapper.studentPage    : <==      Total: 1
+2022-03-06 09:36:58.058 DEBUG 20672 --- [XNIO-1 task-174] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 09:36:58.059 DEBUG 20672 --- [XNIO-1 task-174] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2022-03-06 09:36:58.058(Timestamp)
+2022-03-06 09:36:58.462 DEBUG 20672 --- [XNIO-1 task-174] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 09:36:58.844 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2022-03-06 09:36:58.844 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:36:58.844 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:36:58.845 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2022-03-06 09:36:58.845 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2022-03-06 09:36:58.845 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2022-03-06 09:36:58.846 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2022-03-06 09:36:58.847 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:36:58.848 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:36:58.849 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2022-03-06 09:36:58.849 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:36:58.850 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:36:58.850 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2022-03-06 09:36:58.850 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.U.selectCountByDate            : ==> Parameters: 2022-03-01 00:00:00.0(Timestamp), 2022-03-31 23:59:59.0(Timestamp)
+2022-03-06 09:36:58.851 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.U.selectCountByDate            : <==      Total: 2
+2022-03-06 09:36:58.852 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2022-03-06 09:36:58.852 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.E.selectCountByDate            : ==> Parameters: 2022-03-01 00:00:00.0(Timestamp), 2022-03-31 23:59:59.0(Timestamp)
+2022-03-06 09:36:58.853 DEBUG 20672 --- [XNIO-1 task-175] r.c.m.x.r.E.selectCountByDate            : <==      Total: 1
+2022-03-06 09:37:07.084 DEBUG 20672 --- [XNIO-1 task-176] r.c.m.x.r.SubjectMapper.allSubject       : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject 
+2022-03-06 09:37:07.085 DEBUG 20672 --- [XNIO-1 task-176] r.c.m.x.r.SubjectMapper.allSubject       : ==> Parameters: 
+2022-03-06 09:37:07.085 DEBUG 20672 --- [XNIO-1 task-176] r.c.m.x.r.SubjectMapper.allSubject       : <==      Total: 5
+2022-03-06 09:37:07.388 DEBUG 20672 --- [XNIO-1 task-177] r.c.m.x.r.E.adminPage_COUNT              : ==>  Preparing: SELECT count(0) FROM t_exam_paper_answer 
+2022-03-06 09:37:07.388 DEBUG 20672 --- [XNIO-1 task-177] r.c.m.x.r.E.adminPage_COUNT              : ==> Parameters: 
+2022-03-06 09:37:07.389 DEBUG 20672 --- [XNIO-1 task-177] r.c.m.x.r.E.adminPage_COUNT              : <==      Total: 1
+2022-03-06 09:37:07.389 DEBUG 20672 --- [XNIO-1 task-177] r.c.m.x.r.E.adminPage                    : ==>  Preparing: SELECT id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id FROM t_exam_paper_answer order by id desc LIMIT ? 
+2022-03-06 09:37:07.389 DEBUG 20672 --- [XNIO-1 task-177] r.c.m.x.r.E.adminPage                    : ==> Parameters: 10(Integer)
+2022-03-06 09:37:07.390 DEBUG 20672 --- [XNIO-1 task-177] r.c.m.x.r.E.adminPage                    : <==      Total: 1
+2022-03-06 09:37:07.390 DEBUG 20672 --- [XNIO-1 task-177] r.c.m.x.r.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where id = ? 
+2022-03-06 09:37:07.390 DEBUG 20672 --- [XNIO-1 task-177] r.c.m.x.r.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Integer)
+2022-03-06 09:37:07.392 DEBUG 20672 --- [XNIO-1 task-177] r.c.m.x.r.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2022-03-06 09:37:16.254 DEBUG 20672 --- [XNIO-1 task-180] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 09:37:16.255 DEBUG 20672 --- [XNIO-1 task-180] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 登录了学之思开源考试系统(String), 2022-03-06 09:37:16.254(Timestamp)
+2022-03-06 09:37:16.993 DEBUG 20672 --- [XNIO-1 task-180] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 09:37:17.021 DEBUG 20672 --- [XNIO-1 task-181] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 09:37:17.022 DEBUG 20672 --- [XNIO-1 task-181] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 09:37:17.022 DEBUG 20672 --- [XNIO-1 task-181] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 09:37:17.022 DEBUG 20672 --- [XNIO-1 task-183] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:37:17.023 DEBUG 20672 --- [XNIO-1 task-183] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:37:17.025 DEBUG 20672 --- [XNIO-1 task-183] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:37:17.025 DEBUG 20672 --- [XNIO-1 task-183] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:37:17.026 DEBUG 20672 --- [XNIO-1 task-183] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:37:17.025(Timestamp)
+2022-03-06 09:37:17.026 DEBUG 20672 --- [XNIO-1 task-183] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:37:17.325 DEBUG 20672 --- [XNIO-1 task-184] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:37:17.325 DEBUG 20672 --- [XNIO-1 task-184] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:37:17.326 DEBUG 20672 --- [XNIO-1 task-184] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:37:20.262 DEBUG 20672 --- [XNIO-1 task-185] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:37:20.262 DEBUG 20672 --- [XNIO-1 task-185] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 10(Integer)
+2022-03-06 09:37:20.262 DEBUG 20672 --- [XNIO-1 task-185] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 5
+2022-03-06 09:37:20.617 DEBUG 20672 --- [XNIO-1 task-186] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:37:20.617 DEBUG 20672 --- [XNIO-1 task-186] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:37:20.618 DEBUG 20672 --- [XNIO-1 task-186] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:37:25.224 DEBUG 20672 --- [XNIO-1 task-187] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:37:25.225 DEBUG 20672 --- [XNIO-1 task-187] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 2(Integer), 1(Integer)
+2022-03-06 09:37:25.225 DEBUG 20672 --- [XNIO-1 task-187] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:37:25.225 DEBUG 20672 --- [XNIO-1 task-187] r.c.m.x.r.ExamPaperMapper.studentPage    : ==>  Preparing: SELECT id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? order by id desc LIMIT ? 
+2022-03-06 09:37:25.226 DEBUG 20672 --- [XNIO-1 task-187] r.c.m.x.r.ExamPaperMapper.studentPage    : ==> Parameters: 2(Integer), 1(Integer), 10(Integer)
+2022-03-06 09:37:25.226 DEBUG 20672 --- [XNIO-1 task-187] r.c.m.x.r.ExamPaperMapper.studentPage    : <==      Total: 1
+2022-03-06 09:37:27.377 DEBUG 20672 --- [XNIO-1 task-188] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id from t_exam_paper where id = ? 
+2022-03-06 09:37:27.378 DEBUG 20672 --- [XNIO-1 task-188] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:37:27.378 DEBUG 20672 --- [XNIO-1 task-188] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:37:27.379 DEBUG 20672 --- [XNIO-1 task-188] r.c.m.x.r.QuestionMapper.selectByIds     : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question where id in ( ? ) 
+2022-03-06 09:37:27.379 DEBUG 20672 --- [XNIO-1 task-188] r.c.m.x.r.QuestionMapper.selectByIds     : ==> Parameters: 1(Integer)
+2022-03-06 09:37:27.380 DEBUG 20672 --- [XNIO-1 task-188] r.c.m.x.r.QuestionMapper.selectByIds     : <==      Total: 1
+2022-03-06 09:37:29.435 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id from t_exam_paper where id = ? 
+2022-03-06 09:37:29.435 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:37:29.436 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:37:29.437 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.QuestionMapper.selectByIds     : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question where id in ( ? ) 
+2022-03-06 09:37:29.437 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.QuestionMapper.selectByIds     : ==> Parameters: 1(Integer)
+2022-03-06 09:37:29.437 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.QuestionMapper.selectByIds     : <==      Total: 1
+2022-03-06 09:37:29.438 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.E.insertSelective              : ==>  Preparing: insert into t_exam_paper_answer ( exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2022-03-06 09:37:29.439 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.E.insertSelective              : ==> Parameters: 1(Integer), test(String), 1(Integer), 2(Integer), 1000(Integer), 1000(Integer), 1000(Integer), 1(Integer), 1(Integer), 2(Integer), 2(Integer), 1(Integer), 2022-03-06 09:37:29.435(Timestamp)
+2022-03-06 09:37:29.439 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.E.insertSelective              : <==    Updates: 1
+2022-03-06 09:37:29.440 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.E.insertList                   : ==>  Preparing: insert into t_exam_paper_question_customer_answer ( question_id, question_score, subject_id, create_time, create_user, text_content_id, exam_paper_id, question_type, answer, customer_score, exam_paper_answer_id , do_right,question_text_content_id,item_order) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?) 
+2022-03-06 09:37:29.440 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.E.insertList                   : ==> Parameters: 1(Integer), 1000(Integer), 2(Integer), 2022-03-06 09:37:29.435(Timestamp), 1(Integer), null, 1(Integer), 1(Integer), B(String), 1000(Integer), 2(Integer), true(Boolean), 1(Integer), 1(Integer)
+2022-03-06 09:37:29.441 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.E.insertList                   : <==    Updates: 1
+2022-03-06 09:37:29.614 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 09:37:29.614 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 提交试卷：test 得分：100 耗时：2 秒(String), 2022-03-06 09:37:29.438(Timestamp)
+2022-03-06 09:37:29.763 DEBUG 20672 --- [XNIO-1 task-189] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 09:37:30.955 DEBUG 20672 --- [XNIO-1 task-190] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 09:37:30.956 DEBUG 20672 --- [XNIO-1 task-190] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 09:37:30.956 DEBUG 20672 --- [XNIO-1 task-190] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 09:37:30.962 DEBUG 20672 --- [XNIO-1 task-192] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper_answer WHERE create_user = ? 
+2022-03-06 09:37:30.963 DEBUG 20672 --- [XNIO-1 task-192] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer)
+2022-03-06 09:37:30.963 DEBUG 20672 --- [XNIO-1 task-192] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:37:30.965 DEBUG 20672 --- [XNIO-1 task-192] r.c.m.x.r.E.studentPage                  : ==>  Preparing: SELECT id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id FROM t_exam_paper_answer WHERE create_user = ? order by id desc LIMIT ? 
+2022-03-06 09:37:30.966 DEBUG 20672 --- [XNIO-1 task-192] r.c.m.x.r.E.studentPage                  : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:37:30.968 DEBUG 20672 --- [XNIO-1 task-192] r.c.m.x.r.E.studentPage                  : <==      Total: 2
+2022-03-06 09:37:37.561 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id from t_exam_paper_answer where id = ? 
+2022-03-06 09:37:37.562 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:37:37.563 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:37:37.563 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id from t_exam_paper where id = ? 
+2022-03-06 09:37:37.563 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:37:37.564 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:37:37.565 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.QuestionMapper.selectByIds     : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question where id in ( ? ) 
+2022-03-06 09:37:37.565 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.QuestionMapper.selectByIds     : ==> Parameters: 1(Integer)
+2022-03-06 09:37:37.566 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.QuestionMapper.selectByIds     : <==      Total: 1
+2022-03-06 09:37:37.567 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, exam_paper_id, paper_name, paper_type, subject_id, system_score, user_score, paper_score, question_correct, question_count, do_time, status, create_user, create_time, task_exam_id from t_exam_paper_answer where id = ? 
+2022-03-06 09:37:37.567 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:37:37.570 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:37:37.570 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.E.selectListByPaperAnswerId    : ==>  Preparing: select id, question_id, exam_paper_id, exam_paper_answer_id, question_type, subject_id, customer_score, question_score, question_text_content_id, answer, text_content_id, do_right, create_user, create_time, item_order from t_exam_paper_question_customer_answer where exam_paper_answer_id = ? order by item_order 
+2022-03-06 09:37:37.570 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.E.selectListByPaperAnswerId    : ==> Parameters: 1(Integer)
+2022-03-06 09:37:37.571 DEBUG 20672 --- [XNIO-1 task-193] r.c.m.x.r.E.selectListByPaperAnswerId    : <==      Total: 1
+2022-03-06 09:37:49.252 DEBUG 20672 --- [XNIO-1 task-194] r.c.m.x.r.E.selectByPrimaryKey           : ==>  Preparing: select id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id from t_exam_paper where id = ? 
+2022-03-06 09:37:49.252 DEBUG 20672 --- [XNIO-1 task-194] r.c.m.x.r.E.selectByPrimaryKey           : ==> Parameters: 1(Integer)
+2022-03-06 09:37:49.254 DEBUG 20672 --- [XNIO-1 task-194] r.c.m.x.r.E.selectByPrimaryKey           : <==      Total: 1
+2022-03-06 09:37:49.255 DEBUG 20672 --- [XNIO-1 task-194] r.c.m.x.r.QuestionMapper.selectByIds     : ==>  Preparing: SELECT id, question_type, subject_id, score, grade_level, difficult, correct, info_text_content_id, create_user, status, create_time, deleted FROM t_question where id in ( ? ) 
+2022-03-06 09:37:49.255 DEBUG 20672 --- [XNIO-1 task-194] r.c.m.x.r.QuestionMapper.selectByIds     : ==> Parameters: 1(Integer)
+2022-03-06 09:37:49.256 DEBUG 20672 --- [XNIO-1 task-194] r.c.m.x.r.QuestionMapper.selectByIds     : <==      Total: 1
+2022-03-06 09:37:59.988 DEBUG 20672 --- [XNIO-1 task-195] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:37:59.989 DEBUG 20672 --- [XNIO-1 task-195] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:37:59.990 DEBUG 20672 --- [XNIO-1 task-195] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:37:59.990 DEBUG 20672 --- [XNIO-1 task-196] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:37:59.990 DEBUG 20672 --- [XNIO-1 task-196] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:37:59.990 DEBUG 20672 --- [XNIO-1 task-195] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:37:59.991 DEBUG 20672 --- [XNIO-1 task-195] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:37:59.99(Timestamp)
+2022-03-06 09:37:59.991 DEBUG 20672 --- [XNIO-1 task-196] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:37:59.991 DEBUG 20672 --- [XNIO-1 task-195] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:38:03.132 DEBUG 20672 --- [XNIO-1 task-197] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 09:38:03.134 DEBUG 20672 --- [XNIO-1 task-197] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 09:38:03.136 DEBUG 20672 --- [XNIO-1 task-199] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:38:03.136 DEBUG 20672 --- [XNIO-1 task-197] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 09:38:03.136 DEBUG 20672 --- [XNIO-1 task-199] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:38:03.136 DEBUG 20672 --- [XNIO-1 task-200] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:38:03.137 DEBUG 20672 --- [XNIO-1 task-199] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:38:03.137 DEBUG 20672 --- [XNIO-1 task-200] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:38:03.137 DEBUG 20672 --- [XNIO-1 task-199] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:38:03.137 DEBUG 20672 --- [XNIO-1 task-199] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:38:03.137(Timestamp)
+2022-03-06 09:38:03.137 DEBUG 20672 --- [XNIO-1 task-200] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:38:03.138 DEBUG 20672 --- [XNIO-1 task-199] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:38:17.270 DEBUG 20672 --- [XNIO-1 task-201] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:38:17.271 DEBUG 20672 --- [XNIO-1 task-201] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 10(Integer)
+2022-03-06 09:38:17.272 DEBUG 20672 --- [XNIO-1 task-201] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 5
+2022-03-06 09:38:17.645 DEBUG 20672 --- [XNIO-1 task-202] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:38:17.645 DEBUG 20672 --- [XNIO-1 task-202] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:38:17.646 DEBUG 20672 --- [XNIO-1 task-202] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:38:18.842 DEBUG 20672 --- [XNIO-1 task-203] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:38:18.843 DEBUG 20672 --- [XNIO-1 task-203] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 2(Integer), 1(Integer)
+2022-03-06 09:38:18.843 DEBUG 20672 --- [XNIO-1 task-203] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:38:18.844 DEBUG 20672 --- [XNIO-1 task-203] r.c.m.x.r.ExamPaperMapper.studentPage    : ==>  Preparing: SELECT id, name, subject_id, paper_type, grade_level, score, question_count, suggest_time, limit_start_time, limit_end_time, frame_text_content_id, create_user, create_time, deleted, task_exam_id FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? order by id desc LIMIT ? 
+2022-03-06 09:38:18.844 DEBUG 20672 --- [XNIO-1 task-203] r.c.m.x.r.ExamPaperMapper.studentPage    : ==> Parameters: 2(Integer), 1(Integer), 10(Integer)
+2022-03-06 09:38:18.845 DEBUG 20672 --- [XNIO-1 task-203] r.c.m.x.r.ExamPaperMapper.studentPage    : <==      Total: 1
+2022-03-06 09:38:21.795 DEBUG 20672 --- [XNIO-1 task-204] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:38:21.795 DEBUG 20672 --- [XNIO-1 task-205] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:38:21.795 DEBUG 20672 --- [XNIO-1 task-204] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:38:21.795 DEBUG 20672 --- [XNIO-1 task-205] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:38:21.795 DEBUG 20672 --- [XNIO-1 task-205] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:38:21.796 DEBUG 20672 --- [XNIO-1 task-204] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:38:21.796 DEBUG 20672 --- [XNIO-1 task-204] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:38:21.796 DEBUG 20672 --- [XNIO-1 task-204] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:38:21.796(Timestamp)
+2022-03-06 09:38:21.797 DEBUG 20672 --- [XNIO-1 task-204] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:38:23.851 DEBUG 20672 --- [XNIO-1 task-206] r.c.m.x.r.S.getSubjectByLevel            : ==>  Preparing: select id, name, level, level_name, item_order, deleted from t_subject where level= ? order by item_order 
+2022-03-06 09:38:23.851 DEBUG 20672 --- [XNIO-1 task-206] r.c.m.x.r.S.getSubjectByLevel            : ==> Parameters: 10(Integer)
+2022-03-06 09:38:23.851 DEBUG 20672 --- [XNIO-1 task-206] r.c.m.x.r.S.getSubjectByLevel            : <==      Total: 5
+2022-03-06 09:38:23.897 DEBUG 20672 --- [XNIO-1 task-207] r.c.m.x.r.E.studentPage_COUNT            : ==>  Preparing: SELECT count(0) FROM t_exam_paper WHERE deleted = 0 AND subject_id = ? AND paper_type = ? 
+2022-03-06 09:38:23.897 DEBUG 20672 --- [XNIO-1 task-207] r.c.m.x.r.E.studentPage_COUNT            : ==> Parameters: 1(Integer), 1(Integer)
+2022-03-06 09:38:23.898 DEBUG 20672 --- [XNIO-1 task-207] r.c.m.x.r.E.studentPage_COUNT            : <==      Total: 1
+2022-03-06 09:38:29.885 DEBUG 20672 --- [XNIO-1 task-208] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:38:29.886 DEBUG 20672 --- [XNIO-1 task-208] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:38:29.887 DEBUG 20672 --- [XNIO-1 task-209] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:38:29.887 DEBUG 20672 --- [XNIO-1 task-209] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:38:29.888 DEBUG 20672 --- [XNIO-1 task-208] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:38:29.888 DEBUG 20672 --- [XNIO-1 task-209] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 09:38:29.888 DEBUG 20672 --- [XNIO-1 task-208] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:38:29.888 DEBUG 20672 --- [XNIO-1 task-208] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:38:29.888(Timestamp)
+2022-03-06 09:38:29.889 DEBUG 20672 --- [XNIO-1 task-208] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:38:40.764 DEBUG 20672 --- [XNIO-1 task-212] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 09:38:40.765 DEBUG 20672 --- [XNIO-1 task-212] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2022-03-06 09:38:40.763(Timestamp)
+2022-03-06 09:38:41.174 DEBUG 20672 --- [XNIO-1 task-212] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 09:38:41.239 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2022-03-06 09:38:41.239 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:38:41.240 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:38:41.240 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2022-03-06 09:38:41.240 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2022-03-06 09:38:41.240 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2022-03-06 09:38:41.241 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2022-03-06 09:38:41.241 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:38:41.241 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:38:41.241 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2022-03-06 09:38:41.241 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2022-03-06 09:38:41.242 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2022-03-06 09:38:41.242 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2022-03-06 09:38:41.242 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.U.selectCountByDate            : ==> Parameters: 2022-03-01 00:00:00.0(Timestamp), 2022-03-31 23:59:59.0(Timestamp)
+2022-03-06 09:38:41.244 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.U.selectCountByDate            : <==      Total: 2
+2022-03-06 09:38:41.244 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2022-03-06 09:38:41.244 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.E.selectCountByDate            : ==> Parameters: 2022-03-01 00:00:00.0(Timestamp), 2022-03-31 23:59:59.0(Timestamp)
+2022-03-06 09:38:41.245 DEBUG 20672 --- [XNIO-1 task-213] r.c.m.x.r.E.selectCountByDate            : <==      Total: 1
+2022-03-06 09:39:32.657 DEBUG 20672 --- [XNIO-1 task-215] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 09:39:32.657 DEBUG 20672 --- [XNIO-1 task-215] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 登录了学之思开源考试系统(String), 2022-03-06 09:39:32.656(Timestamp)
+2022-03-06 09:39:32.930 DEBUG 20672 --- [XNIO-1 task-215] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 09:39:33.288 DEBUG 20672 --- [XNIO-1 task-218] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 09:39:33.288 DEBUG 20672 --- [XNIO-1 task-216] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 09:39:33.288 DEBUG 20672 --- [XNIO-1 task-216] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 09:39:33.288 DEBUG 20672 --- [XNIO-1 task-218] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 09:39:33.289 DEBUG 20672 --- [XNIO-1 task-216] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 09:39:33.289 DEBUG 20672 --- [XNIO-1 task-218] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 09:39:33.290 DEBUG 20672 --- [XNIO-1 task-218] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 09:39:33.290 DEBUG 20672 --- [XNIO-1 task-218] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 09:39:33.289(Timestamp)
+2022-03-06 09:39:33.291 DEBUG 20672 --- [XNIO-1 task-218] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 09:39:33.291 DEBUG 20672 --- [XNIO-1 task-219] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 09:39:33.292 DEBUG 20672 --- [XNIO-1 task-219] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 09:39:33.293 DEBUG 20672 --- [XNIO-1 task-219] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
