@@ -33,13 +33,13 @@
 2022-03-05 20:53:32.726 DEBUG 14896 --- [XNIO-1 task-48] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
 2022-03-05 20:53:32.742 DEBUG 14896 --- [XNIO-1 task-48] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
 2022-03-05 20:53:39.568 DEBUG 14896 --- [XNIO-1 task-49] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
-2022-03-05 20:53:39.571 DEBUG 14896 --- [XNIO-1 task-49] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2022-03-05 20:53:39.555(Timestamp)
+2022-03-05 20:53:39.571 DEBUG 14896 --- [XNIO-1 task-49] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了OnlineTest考试系统(String), 2022-03-05 20:53:39.555(Timestamp)
 2022-03-05 20:53:39.720 DEBUG 14896 --- [XNIO-1 task-49] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
 2022-03-05 20:53:53.784 DEBUG 14896 --- [XNIO-1 task-54] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
 2022-03-05 20:53:53.784 DEBUG 14896 --- [XNIO-1 task-54] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
 2022-03-05 20:53:53.786 DEBUG 14896 --- [XNIO-1 task-54] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
 2022-03-05 20:53:53.789 DEBUG 14896 --- [XNIO-1 task-54] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
-2022-03-05 20:53:53.789 DEBUG 14896 --- [XNIO-1 task-54] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 登录了学之思开源考试系统(String), 2022-03-05 20:53:53.788(Timestamp)
+2022-03-05 20:53:53.789 DEBUG 14896 --- [XNIO-1 task-54] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 学生(String), student 登录了OnlineTest考试系统(String), 2022-03-05 20:53:53.788(Timestamp)
 2022-03-05 20:53:53.948 DEBUG 14896 --- [XNIO-1 task-54] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
 2022-03-05 20:53:53.988 DEBUG 14896 --- [XNIO-1 task-55] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
 2022-03-05 20:53:53.991 DEBUG 14896 --- [XNIO-1 task-55] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
@@ -135,7 +135,7 @@
 2022-03-05 20:57:28.213 DEBUG 14896 --- [XNIO-1 task-82] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 1(Integer)
 2022-03-05 20:57:28.214 DEBUG 14896 --- [XNIO-1 task-82] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
 2022-03-05 20:59:27.998 DEBUG 14896 --- [XNIO-1 task-84] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
-2022-03-05 20:59:27.999 DEBUG 14896 --- [XNIO-1 task-84] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2022-03-05 20:59:27.998(Timestamp)
+2022-03-05 20:59:27.999 DEBUG 14896 --- [XNIO-1 task-84] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了OnlineTest考试系统(String), 2022-03-05 20:59:27.998(Timestamp)
 2022-03-05 20:59:28.416 DEBUG 14896 --- [XNIO-1 task-84] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
 2022-03-05 20:59:28.486 DEBUG 14896 --- [XNIO-1 task-85] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
 2022-03-05 20:59:28.486 DEBUG 14896 --- [XNIO-1 task-85] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
@@ -291,10 +291,10 @@
 2022-03-05 21:11:18.266 DEBUG 14896 --- [XNIO-1 task-179] r.c.m.x.r.E.adminPage_COUNT              : ==> Parameters: 
 2022-03-05 21:11:18.266 DEBUG 14896 --- [XNIO-1 task-179] r.c.m.x.r.E.adminPage_COUNT              : <==      Total: 1
 2022-03-05 21:11:21.024 DEBUG 14896 --- [XNIO-1 task-180] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
-2022-03-05 21:11:21.025 DEBUG 14896 --- [XNIO-1 task-180] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登出了学之思开源考试系统(String), 2022-03-05 21:11:21.024(Timestamp)
+2022-03-05 21:11:21.025 DEBUG 14896 --- [XNIO-1 task-180] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登出了OnlineTest考试系统(String), 2022-03-05 21:11:21.024(Timestamp)
 2022-03-05 21:11:21.446 DEBUG 14896 --- [XNIO-1 task-180] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
 2022-03-05 21:11:34.058 DEBUG 14896 --- [XNIO-1 task-181] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
-2022-03-05 21:11:34.059 DEBUG 14896 --- [XNIO-1 task-181] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思开源考试系统(String), 2022-03-05 21:11:34.056(Timestamp)
+2022-03-05 21:11:34.059 DEBUG 14896 --- [XNIO-1 task-181] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了OnlineTest考试系统(String), 2022-03-05 21:11:34.056(Timestamp)
 2022-03-05 21:11:34.223 DEBUG 14896 --- [XNIO-1 task-181] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
 2022-03-05 21:11:34.326 DEBUG 14896 --- [XNIO-1 task-182] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
 2022-03-05 21:11:34.326 DEBUG 14896 --- [XNIO-1 task-182] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 

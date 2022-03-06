@@ -931,3 +931,180 @@
 2022-03-06 09:39:33.291 DEBUG 20672 --- [XNIO-1 task-219] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
 2022-03-06 09:39:33.292 DEBUG 20672 --- [XNIO-1 task-219] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
 2022-03-06 09:39:33.293 DEBUG 20672 --- [XNIO-1 task-219] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 20:25:04.023  INFO 28348 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on DESKTOP-SKB4ABI with PID 28348 (started by 黄涛 in C:\Users\黄涛\Desktop\2022黄涛毕业设计\xzs-mysql\source\bs-java)
+2022-03-06 20:25:04.026  INFO 28348 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2022-03-06 20:25:04.115  INFO 28348 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-06 20:25:04.116  INFO 28348 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-06 20:25:05.277  WARN 28348 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-03-06 20:25:05.294  INFO 28348 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-03-06 20:25:05.294  INFO 28348 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1178 ms
+2022-03-06 20:25:06.044  INFO 28348 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@762c14aa, org.springframework.security.web.context.SecurityContextPersistenceFilter@18e95fdc, org.springframework.security.web.header.HeaderWriterFilter@4062608, org.springframework.web.filter.CorsFilter@4d83b333, org.springframework.security.web.authentication.logout.LogoutFilter@1ae64957, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@18598b8f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@8728173, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17625cc0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@199e0161, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@1cf76a36, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a00ab4c, org.springframework.security.web.session.SessionManagementFilter@7c08c4e7, org.springframework.security.web.access.ExceptionTranslationFilter@40d41731, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59269e65]
+2022-03-06 20:25:06.380  INFO 28348 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-06 20:25:06.418  INFO 28348 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2022-03-06 20:25:06.426  INFO 28348 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-03-06 20:25:06.493  INFO 28348 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2022-03-06 20:25:06.496  INFO 28348 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 3.182 seconds (JVM running for 4.331)
+2022-03-06 20:25:14.105  INFO 28348 --- [XNIO-1 task-4] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-06 20:25:14.105  INFO 28348 --- [XNIO-1 task-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-06 20:25:14.112  INFO 28348 --- [XNIO-1 task-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-03-06 20:25:15.435  INFO 28348 --- [XNIO-1 task-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-06 20:25:15.586  INFO 28348 --- [XNIO-1 task-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-06 20:25:15.594 DEBUG 28348 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2022-03-06 20:25:15.621 DEBUG 28348 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2022-03-06 20:25:15.649 DEBUG 28348 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2022-03-06 20:25:16.088 DEBUG 28348 --- [XNIO-1 task-5] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 20:25:16.089 DEBUG 28348 --- [XNIO-1 task-5] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 林亿(String), student 登录了学之思开源考试系统(String), 2022-03-06 20:25:16.076(Timestamp)
+2022-03-06 20:25:16.480 DEBUG 28348 --- [XNIO-1 task-5] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 20:25:16.528 DEBUG 28348 --- [XNIO-1 task-6] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 20:25:16.529 DEBUG 28348 --- [XNIO-1 task-6] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 20:25:16.531 DEBUG 28348 --- [XNIO-1 task-6] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 20:25:16.833 DEBUG 28348 --- [XNIO-1 task-9] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 20:25:16.836 DEBUG 28348 --- [XNIO-1 task-8] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 20:25:16.836 DEBUG 28348 --- [XNIO-1 task-9] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 20:25:16.836 DEBUG 28348 --- [XNIO-1 task-8] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 20:25:16.837 DEBUG 28348 --- [XNIO-1 task-9] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 20:25:16.838 DEBUG 28348 --- [XNIO-1 task-8] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 20:25:16.840 DEBUG 28348 --- [XNIO-1 task-8] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 20:25:16.841 DEBUG 28348 --- [XNIO-1 task-8] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 20:25:16.839(Timestamp)
+2022-03-06 20:25:16.842 DEBUG 28348 --- [XNIO-1 task-8] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 20:25:18.124 DEBUG 28348 --- [XNIO-1 task-10] r.c.m.x.r.U.getUserEventLogByUserId      : ==>  Preparing: select id, user_id, user_name, real_name, content, create_time from t_user_event_log where user_id=? order by id desc limit 10 
+2022-03-06 20:25:18.124 DEBUG 28348 --- [XNIO-1 task-10] r.c.m.x.r.U.getUserEventLogByUserId      : ==> Parameters: 1(Integer)
+2022-03-06 20:25:18.130 DEBUG 28348 --- [XNIO-1 task-10] r.c.m.x.r.U.getUserEventLogByUserId      : <==      Total: 10
+2022-03-06 20:25:33.323 DEBUG 28348 --- [XNIO-1 task-12] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 20:25:33.325 DEBUG 28348 --- [XNIO-1 task-12] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 林亿(String), student 登出了学之思开源考试系统(String), 2022-03-06 20:25:33.323(Timestamp)
+2022-03-06 20:25:33.926 DEBUG 28348 --- [XNIO-1 task-12] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 20:25:39.231 DEBUG 28348 --- [XNIO-1 task-13] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 20:25:39.232 DEBUG 28348 --- [XNIO-1 task-13] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 林亿(String), student 登录了学之思开源考试系统(String), 2022-03-06 20:25:39.23(Timestamp)
+2022-03-06 20:25:39.911 DEBUG 28348 --- [XNIO-1 task-13] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 20:25:39.984 DEBUG 28348 --- [XNIO-1 task-14] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 20:25:39.985 DEBUG 28348 --- [XNIO-1 task-14] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 20:25:39.990 DEBUG 28348 --- [XNIO-1 task-14] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 20:25:39.990 DEBUG 28348 --- [XNIO-1 task-16] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 20:25:39.991 DEBUG 28348 --- [XNIO-1 task-16] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 20:25:39.995 DEBUG 28348 --- [XNIO-1 task-16] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 20:25:39.993 DEBUG 28348 --- [XNIO-1 task-17] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 20:25:39.996 DEBUG 28348 --- [XNIO-1 task-17] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 20:25:39.997 DEBUG 28348 --- [XNIO-1 task-16] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 20:25:39.999 DEBUG 28348 --- [XNIO-1 task-17] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 20:25:40.000 DEBUG 28348 --- [XNIO-1 task-16] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 20:25:39.996(Timestamp)
+2022-03-06 20:25:40.002 DEBUG 28348 --- [XNIO-1 task-16] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 20:25:41.497 DEBUG 28348 --- [XNIO-1 task-18] r.c.m.x.r.U.getUserEventLogByUserId      : ==>  Preparing: select id, user_id, user_name, real_name, content, create_time from t_user_event_log where user_id=? order by id desc limit 10 
+2022-03-06 20:25:41.497 DEBUG 28348 --- [XNIO-1 task-18] r.c.m.x.r.U.getUserEventLogByUserId      : ==> Parameters: 1(Integer)
+2022-03-06 20:25:41.501 DEBUG 28348 --- [XNIO-1 task-18] r.c.m.x.r.U.getUserEventLogByUserId      : <==      Total: 10
+2022-03-06 20:30:16.340  INFO 21772 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on DESKTOP-SKB4ABI with PID 21772 (started by 黄涛 in C:\Users\黄涛\Desktop\2022黄涛毕业设计\xzs-mysql\source\bs-java)
+2022-03-06 20:30:16.342  INFO 21772 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2022-03-06 20:30:16.394  INFO 21772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-06 20:30:16.394  INFO 21772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-06 20:30:17.404  WARN 21772 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-03-06 20:30:17.421  INFO 21772 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-03-06 20:30:17.421  INFO 21772 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1027 ms
+2022-03-06 20:30:18.153  INFO 21772 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62281a2d, org.springframework.security.web.context.SecurityContextPersistenceFilter@49299f68, org.springframework.security.web.header.HeaderWriterFilter@5be71f0b, org.springframework.web.filter.CorsFilter@4ca9e60e, org.springframework.security.web.authentication.logout.LogoutFilter@65ed7c00, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@5da9ef68, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@623f1df0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@241becb5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@101c9473, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@b077119, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b71ba2a, org.springframework.security.web.session.SessionManagementFilter@143d5d62, org.springframework.security.web.access.ExceptionTranslationFilter@2d573d97, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79d70666]
+2022-03-06 20:30:18.490  INFO 21772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-06 20:30:18.527  INFO 21772 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2022-03-06 20:30:18.534  INFO 21772 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-03-06 20:30:18.596  INFO 21772 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2022-03-06 20:30:18.598  INFO 21772 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 2.615 seconds (JVM running for 3.674)
+2022-03-06 20:30:22.809  INFO 21772 --- [XNIO-1 task-3] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-06 20:30:22.809  INFO 21772 --- [XNIO-1 task-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-06 20:30:22.816  INFO 21772 --- [XNIO-1 task-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-03-06 20:30:24.156  INFO 21772 --- [XNIO-1 task-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-06 20:30:24.342  INFO 21772 --- [XNIO-1 task-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-06 20:30:24.351 DEBUG 21772 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2022-03-06 20:30:24.380 DEBUG 21772 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: student(String)
+2022-03-06 20:30:24.408 DEBUG 21772 --- [XNIO-1 task-5] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2022-03-06 20:30:24.845 DEBUG 21772 --- [XNIO-1 task-5] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 20:30:24.847 DEBUG 21772 --- [XNIO-1 task-5] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 林亿(String), student 登录了学之思开源考试系统(String), 2022-03-06 20:30:24.833(Timestamp)
+2022-03-06 20:30:25.248 DEBUG 21772 --- [XNIO-1 task-5] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 20:30:25.302 DEBUG 21772 --- [XNIO-1 task-6] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 20:30:25.302 DEBUG 21772 --- [XNIO-1 task-6] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 20:30:25.304 DEBUG 21772 --- [XNIO-1 task-6] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 20:30:25.614 DEBUG 21772 --- [XNIO-1 task-7] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 20:30:25.615 DEBUG 21772 --- [XNIO-1 task-7] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 20:30:25.616 DEBUG 21772 --- [XNIO-1 task-9] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 20:30:25.617 DEBUG 21772 --- [XNIO-1 task-9] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 20:30:25.618 DEBUG 21772 --- [XNIO-1 task-7] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 20:30:25.618 DEBUG 21772 --- [XNIO-1 task-9] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 20:30:25.620 DEBUG 21772 --- [XNIO-1 task-7] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 20:30:25.621 DEBUG 21772 --- [XNIO-1 task-7] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 20:30:25.619(Timestamp)
+2022-03-06 20:30:25.622 DEBUG 21772 --- [XNIO-1 task-7] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 20:30:26.811 DEBUG 21772 --- [XNIO-1 task-10] r.c.m.x.r.U.getUserEventLogByUserId      : ==>  Preparing: select id, user_id, user_name, real_name, content, create_time from t_user_event_log where user_id=? order by id desc limit 10 
+2022-03-06 20:30:26.812 DEBUG 21772 --- [XNIO-1 task-10] r.c.m.x.r.U.getUserEventLogByUserId      : ==> Parameters: 1(Integer)
+2022-03-06 20:30:26.816 DEBUG 21772 --- [XNIO-1 task-10] r.c.m.x.r.U.getUserEventLogByUserId      : <==      Total: 10
+2022-03-06 20:30:37.753 DEBUG 21772 --- [XNIO-1 task-12] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 20:30:37.753 DEBUG 21772 --- [XNIO-1 task-12] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 20:30:37.754 DEBUG 21772 --- [XNIO-1 task-12] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 20:30:37.755 DEBUG 21772 --- [XNIO-1 task-14] r.c.m.x.r.U.getUserEventLogByUserId      : ==>  Preparing: select id, user_id, user_name, real_name, content, create_time from t_user_event_log where user_id=? order by id desc limit 10 
+2022-03-06 20:30:37.756 DEBUG 21772 --- [XNIO-1 task-14] r.c.m.x.r.U.getUserEventLogByUserId      : ==> Parameters: 1(Integer)
+2022-03-06 20:30:37.761 DEBUG 21772 --- [XNIO-1 task-14] r.c.m.x.r.U.getUserEventLogByUserId      : <==      Total: 10
+2022-03-06 20:30:43.565 DEBUG 21772 --- [XNIO-1 task-16] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 20:30:43.566 DEBUG 21772 --- [XNIO-1 task-16] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 林亿(String), student 登出了学之思开源考试系统(String), 2022-03-06 20:30:43.565(Timestamp)
+2022-03-06 20:30:43.884 DEBUG 21772 --- [XNIO-1 task-16] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 20:30:45.054 DEBUG 21772 --- [XNIO-1 task-17] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 20:30:45.055 DEBUG 21772 --- [XNIO-1 task-17] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 林亿(String), student 登录了学之思开源考试系统(String), 2022-03-06 20:30:45.054(Timestamp)
+2022-03-06 20:30:45.103 DEBUG 21772 --- [XNIO-1 task-17] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 20:30:45.363 DEBUG 21772 --- [XNIO-1 task-18] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 20:30:45.363 DEBUG 21772 --- [XNIO-1 task-18] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 20:30:45.364 DEBUG 21772 --- [XNIO-1 task-18] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 20:30:45.462 DEBUG 21772 --- [XNIO-1 task-20] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 20:30:45.463 DEBUG 21772 --- [XNIO-1 task-21] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 20:30:45.463 DEBUG 21772 --- [XNIO-1 task-20] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 20:30:45.464 DEBUG 21772 --- [XNIO-1 task-21] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 20:30:45.464 DEBUG 21772 --- [XNIO-1 task-20] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 20:30:45.465 DEBUG 21772 --- [XNIO-1 task-21] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 20:30:45.467 DEBUG 21772 --- [XNIO-1 task-21] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 20:30:45.468 DEBUG 21772 --- [XNIO-1 task-21] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 20:30:45.466(Timestamp)
+2022-03-06 20:30:45.469 DEBUG 21772 --- [XNIO-1 task-21] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 20:30:46.938 DEBUG 21772 --- [XNIO-1 task-22] r.c.m.x.r.U.getUserEventLogByUserId      : ==>  Preparing: select id, user_id, user_name, real_name, content, create_time from t_user_event_log where user_id=? order by id desc limit 10 
+2022-03-06 20:30:46.939 DEBUG 21772 --- [XNIO-1 task-22] r.c.m.x.r.U.getUserEventLogByUserId      : ==> Parameters: 1(Integer)
+2022-03-06 20:30:46.942 DEBUG 21772 --- [XNIO-1 task-22] r.c.m.x.r.U.getUserEventLogByUserId      : <==      Total: 10
+2022-03-06 20:32:35.751 DEBUG 21772 --- [XNIO-1 task-24] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 20:32:35.751 DEBUG 21772 --- [XNIO-1 task-24] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 20:32:35.752 DEBUG 21772 --- [XNIO-1 task-24] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 20:32:35.754 DEBUG 21772 --- [XNIO-1 task-26] r.c.m.x.r.U.getUserEventLogByUserId      : ==>  Preparing: select id, user_id, user_name, real_name, content, create_time from t_user_event_log where user_id=? order by id desc limit 10 
+2022-03-06 20:32:35.754 DEBUG 21772 --- [XNIO-1 task-26] r.c.m.x.r.U.getUserEventLogByUserId      : ==> Parameters: 1(Integer)
+2022-03-06 20:32:35.756 DEBUG 21772 --- [XNIO-1 task-26] r.c.m.x.r.U.getUserEventLogByUserId      : <==      Total: 10
+2022-03-06 20:32:37.131 DEBUG 21772 --- [XNIO-1 task-28] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 20:32:37.132 DEBUG 21772 --- [XNIO-1 task-28] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 林亿(String), student 登出了学之思开源考试系统(String), 2022-03-06 20:32:37.131(Timestamp)
+2022-03-06 20:32:37.553 DEBUG 21772 --- [XNIO-1 task-28] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 20:32:38.593 DEBUG 21772 --- [XNIO-1 task-29] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 20:32:38.594 DEBUG 21772 --- [XNIO-1 task-29] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 林亿(String), student 登录了学之思开源考试系统(String), 2022-03-06 20:32:38.593(Timestamp)
+2022-03-06 20:32:38.647 DEBUG 21772 --- [XNIO-1 task-29] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 20:32:38.905 DEBUG 21772 --- [XNIO-1 task-30] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 20:32:38.906 DEBUG 21772 --- [XNIO-1 task-30] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 20:32:38.908 DEBUG 21772 --- [XNIO-1 task-30] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 20:32:39.009 DEBUG 21772 --- [XNIO-1 task-33] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 20:32:39.009 DEBUG 21772 --- [XNIO-1 task-33] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 20:32:39.009 DEBUG 21772 --- [XNIO-1 task-32] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 20:32:39.011 DEBUG 21772 --- [XNIO-1 task-32] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 20:32:39.011 DEBUG 21772 --- [XNIO-1 task-33] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 20:32:39.013 DEBUG 21772 --- [XNIO-1 task-32] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 20:32:39.014 DEBUG 21772 --- [XNIO-1 task-32] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 20:32:39.014 DEBUG 21772 --- [XNIO-1 task-32] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 20:32:39.013(Timestamp)
+2022-03-06 20:32:39.016 DEBUG 21772 --- [XNIO-1 task-32] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 20:32:40.754 DEBUG 21772 --- [XNIO-1 task-34] r.c.m.x.r.U.getUserEventLogByUserId      : ==>  Preparing: select id, user_id, user_name, real_name, content, create_time from t_user_event_log where user_id=? order by id desc limit 10 
+2022-03-06 20:32:40.755 DEBUG 21772 --- [XNIO-1 task-34] r.c.m.x.r.U.getUserEventLogByUserId      : ==> Parameters: 1(Integer)
+2022-03-06 20:32:40.761 DEBUG 21772 --- [XNIO-1 task-34] r.c.m.x.r.U.getUserEventLogByUserId      : <==      Total: 10
+2022-03-06 20:33:03.497 DEBUG 21772 --- [XNIO-1 task-36] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 20:33:03.497 DEBUG 21772 --- [XNIO-1 task-36] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 林亿(String), student 登出了学之思开源考试系统(String), 2022-03-06 20:33:03.496(Timestamp)
+2022-03-06 20:33:03.622 DEBUG 21772 --- [XNIO-1 task-36] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 20:33:07.617 DEBUG 21772 --- [XNIO-1 task-37] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2022-03-06 20:33:07.618 DEBUG 21772 --- [XNIO-1 task-37] r.c.m.x.r.U.insertSelective              : ==> Parameters: 1(Integer), student(String), 林亿(String), student 登录了学之思开源考试系统(String), 2022-03-06 20:33:07.616(Timestamp)
+2022-03-06 20:33:07.676 DEBUG 21772 --- [XNIO-1 task-37] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2022-03-06 20:33:07.752 DEBUG 21772 --- [XNIO-1 task-38] r.c.m.x.r.MessageUserMapper.unReadCount  : ==>  Preparing: select count(*) from t_message_user where readed='f' and receive_user_id = ? 
+2022-03-06 20:33:07.753 DEBUG 21772 --- [XNIO-1 task-38] r.c.m.x.r.MessageUserMapper.unReadCount  : ==> Parameters: 1(Integer)
+2022-03-06 20:33:07.755 DEBUG 21772 --- [XNIO-1 task-38] r.c.m.x.r.MessageUserMapper.unReadCount  : <==      Total: 1
+2022-03-06 20:33:07.758 DEBUG 21772 --- [XNIO-1 task-40] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? ORDER BY id desc limit 5 
+2022-03-06 20:33:07.759 DEBUG 21772 --- [XNIO-1 task-40] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 1(Integer), 10(Integer)
+2022-03-06 20:33:07.761 DEBUG 21772 --- [XNIO-1 task-40] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 1
+2022-03-06 20:33:07.762 DEBUG 21772 --- [XNIO-1 task-41] r.c.m.x.r.T.getByGradeLevel              : ==>  Preparing: select id, title, grade_level, frame_text_content_id, create_user, create_time, deleted, create_user_name from t_task_exam where deleted=0 and grade_level = ? 
+2022-03-06 20:33:07.763 DEBUG 21772 --- [XNIO-1 task-41] r.c.m.x.r.T.getByGradeLevel              : ==> Parameters: 10(Integer)
+2022-03-06 20:33:07.763 DEBUG 21772 --- [XNIO-1 task-40] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==>  Preparing: SELECT id,name,limit_start_time,limit_end_time FROM t_exam_paper WHERE deleted=0 and paper_type= ? and grade_level=? and ? between limit_start_time and limit_end_time ORDER BY id desc limit 5 
+2022-03-06 20:33:07.764 DEBUG 21772 --- [XNIO-1 task-41] r.c.m.x.r.T.getByGradeLevel              : <==      Total: 0
+2022-03-06 20:33:07.764 DEBUG 21772 --- [XNIO-1 task-40] r.c.m.x.r.ExamPaperMapper.indexPaper     : ==> Parameters: 4(Integer), 10(Integer), 2022-03-06 20:33:07.762(Timestamp)
+2022-03-06 20:33:07.766 DEBUG 21772 --- [XNIO-1 task-40] r.c.m.x.r.ExamPaperMapper.indexPaper     : <==      Total: 0
+2022-03-06 20:33:29.320 DEBUG 21772 --- [XNIO-1 task-42] r.c.m.x.r.U.getUserEventLogByUserId      : ==>  Preparing: select id, user_id, user_name, real_name, content, create_time from t_user_event_log where user_id=? order by id desc limit 10 
+2022-03-06 20:33:29.321 DEBUG 21772 --- [XNIO-1 task-42] r.c.m.x.r.U.getUserEventLogByUserId      : ==> Parameters: 1(Integer)
+2022-03-06 20:33:29.323 DEBUG 21772 --- [XNIO-1 task-42] r.c.m.x.r.U.getUserEventLogByUserId      : <==      Total: 10
+2022-03-06 20:35:03.049  INFO 21772 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-06 20:35:03.056  INFO 21772 --- [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-06 20:35:03.057  INFO 21772 --- [Thread-11] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
